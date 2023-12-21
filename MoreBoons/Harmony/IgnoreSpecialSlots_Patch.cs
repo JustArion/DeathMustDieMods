@@ -35,8 +35,22 @@ public class IgnoreSpecialSlots_Patch1
 [HarmonyPatch(typeof(RewardGenerator), "CheckSpecialSlotOffer")]
 public class IgnoreSpecialSlots_Patch2
 {
+    
+    // This reduces the chances of receiving a 'Special Slot Offer' by this percent.
+    // This is done due to the very high chance upon meeting a god to receive this boon.
+    // 1f (100%) becomes 40%
+    // 0.4f (40%) becomes 16%
+    private const int OFFER_PROBABILITY_REDUCTION_PERCENT = 60;
+
     [UsedImplicitly]
-    private static void Postfix(RewardGenerator __instance, BoonSlot __0, ref bool __result, ref Boon __3)
+    private static bool Prefix(ref float ___probabilityNew)
+    {
+        ___probabilityNew *= 1 - OFFER_PROBABILITY_REDUCTION_PERCENT  / 100f;
+        return true;
+    }
+    
+    [UsedImplicitly]
+    private static void Postfix(RewardGenerator __instance, ref bool __result, BoonSlot __0, ref Boon __3)
     {
         try
         {
