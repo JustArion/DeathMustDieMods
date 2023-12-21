@@ -1,0 +1,1 @@
+A small collection of mods I've made for the game `Death Must Die` using the BepInEx mod loader.

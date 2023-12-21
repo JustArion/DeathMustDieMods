@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LimitlessEncounters", "LimitlessEncounters\LimitlessEncounters.csproj", "{145525EA-EC8C-4D4E-98F8-EF7B46DB1F38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoreBoons", "MoreBoons\MoreBoons.csproj", "{52066DA0-0C59-445E-8CB1-DED559D5FDA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoreStashTabs", "MoreStashTabs\MoreStashTabs.csproj", "{A70BD76F-7333-4B33-A968-F653297F3CFA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{145525EA-EC8C-4D4E-98F8-EF7B46DB1F38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{145525EA-EC8C-4D4E-98F8-EF7B46DB1F38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{145525EA-EC8C-4D4E-98F8-EF7B46DB1F38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{145525EA-EC8C-4D4E-98F8-EF7B46DB1F38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52066DA0-0C59-445E-8CB1-DED559D5FDA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52066DA0-0C59-445E-8CB1-DED559D5FDA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52066DA0-0C59-445E-8CB1-DED559D5FDA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52066DA0-0C59-445E-8CB1-DED559D5FDA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A70BD76F-7333-4B33-A968-F653297F3CFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A70BD76F-7333-4B33-A968-F653297F3CFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A70BD76F-7333-4B33-A968-F653297F3CFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A70BD76F-7333-4B33-A968-F653297F3CFA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
