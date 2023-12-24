@@ -43,9 +43,9 @@ public class IgnoreSpecialSlots_Patch2
     private const int OFFER_PROBABILITY_REDUCTION_PERCENT = 60;
 
     [UsedImplicitly]
-    private static bool Prefix(ref float ___probabilityNew)
+    private static bool Prefix(ref float __1)
     {
-        ___probabilityNew *= 1 - OFFER_PROBABILITY_REDUCTION_PERCENT  / 100f;
+        __1 *= 1 - OFFER_PROBABILITY_REDUCTION_PERCENT  / 100f;
         return true;
     }
     
