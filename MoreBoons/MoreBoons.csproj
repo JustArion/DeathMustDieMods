@@ -4,7 +4,7 @@
         <TargetFramework>net48</TargetFramework>
         <AssemblyName>MoreBoons</AssemblyName>
         <Description>Changes the amount of boons you get when leveling up.</Description>
-        <Version>1.0.0</Version>
+        <Version>1.0.1</Version>
         <LangVersion>latest</LangVersion>
         <RootNamespace>Dawn.DMD.MoreBoons</RootNamespace>
         <RestoreAdditionalProjectSources>
