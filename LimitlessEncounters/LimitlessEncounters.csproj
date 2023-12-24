@@ -4,7 +4,7 @@
         <TargetFramework>net48</TargetFramework>
         <AssemblyName>LimitlessEncounters</AssemblyName>
         <Description>Uncaps the default limit of god encounters in a run.</Description>
-        <Version>1.0.1</Version>
+        <Version>1.0.2</Version>
         <LangVersion>latest</LangVersion>
         <RootNamespace>Dawn.DMD.LimitlessEncounters</RootNamespace>
         <RestoreAdditionalProjectSources>

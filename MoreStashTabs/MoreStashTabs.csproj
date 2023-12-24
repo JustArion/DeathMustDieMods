@@ -4,7 +4,7 @@
         <TargetFramework>net48</TargetFramework>
         <AssemblyName>MoreStashTabs</AssemblyName>
         <Description>Adds 2 more stash tabs to the game.</Description>
-        <Version>1.0.1</Version>
+        <Version>1.0.2</Version>
         <LangVersion>latest</LangVersion>
         <RootNamespace>Dawn.DMD.MoreStashTabs</RootNamespace>
         <RestoreAdditionalProjectSources>
