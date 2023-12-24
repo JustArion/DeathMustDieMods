@@ -39,7 +39,7 @@ public class AddMoreStashTabs_Patch
             Plugin._Logger.LogDebug("Mimic state created");
 
             // 3 Pages is the known default
-            if (mimicState.Pages.Length is not 3)
+            if (mimicState.Pages.Length is not (3 or 4))
                 return;
 
             Array.Resize(ref mimicState.Pages, 5);
