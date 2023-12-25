@@ -1,9 +1,7 @@
 ﻿namespace Dawn.DMD.LimitlessEncounters.Harmony;
 
-using System;
 using System.Collections;
 using Death.Run.Systems;
-using HarmonyLib;
 using JetBrains.Annotations;
 
 [HarmonyPatch(MethodType.Constructor)]
@@ -11,7 +9,7 @@ using JetBrains.Annotations;
 public class MaxGodsPerRun_Patch
 {
     [UsedImplicitly]
-    private static void Postfix(GameRules __instance) => Plugin._Instance.StartCoroutine(WaitOnce(__instance));
+    private static void Postfix(GameRules __instance) => Instance.StartCoroutine(WaitOnce(__instance));
 
     // The class is deserialized. A regular Constructor patch wouldn't have worked. We use a Coroutine instead.
     private static IEnumerator WaitOnce(GameRules rules)
@@ -25,11 +23,11 @@ public class MaxGodsPerRun_Patch
             const int NEW_GODS_PER_RUN = int.MaxValue;
             rules.GodsPerRun = NEW_GODS_PER_RUN;
             if (defaultGodsPerRun != NEW_GODS_PER_RUN)
-                Plugin._Logger.LogDebug($"Gods per run changed from [{defaultGodsPerRun}] to [{rules.GodsPerRun}] Gods per run");
+                Logger.LogDebug($"Gods per run changed from [{defaultGodsPerRun}] to [{rules.GodsPerRun}] Gods per run");
         }
         catch (Exception e)
         {
-            Plugin._Logger.LogError(e);
+            Logger.LogError(e);
         }
 
     }
