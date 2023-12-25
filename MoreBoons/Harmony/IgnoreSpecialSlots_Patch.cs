@@ -1,9 +1,6 @@
 ﻿namespace Dawn.DMD.MoreBoons.Harmony;
 
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
 using Death.Run.Core.Boons;
 using Death.Run.Systems;
 using Death.Run.Systems.Rewards;
@@ -45,7 +42,10 @@ public class IgnoreSpecialSlots_Patch2
     [UsedImplicitly]
     private static bool Prefix(ref float __1)
     {
+        var originalProbability = __1;
         __1 *= 1 - OFFER_PROBABILITY_REDUCTION_PERCENT  / 100f;
+        
+        // Logger.LogDebug($"Reduced Special Slot Offer Probability from {originalProbability * 100}% to {__1 * 100}%");
         return true;
     }
     
@@ -60,18 +60,18 @@ public class IgnoreSpecialSlots_Patch2
             var _boonManager = _getBoonManager.Value(__instance);
 
             var approximateMatch = StripClass(__3!.Code);
-            Plugin._Logger.LogDebug($"Found Special Slot Item '{__3!.Code}'");
+            Logger.LogDebug($"Found Special Slot Item '{__3!.Code}'");
 
             if (!_boonManager.Any(x => x.Code.StartsWith(approximateMatch))) 
                 return;
             
-            Plugin._Logger.LogDebug($"Found Duplicate '{__3.Code}' from approx match {approximateMatch}");
+            Logger.LogDebug($"Found Duplicate '{__3.Code}' from approx match {approximateMatch}");
             __result = false;
             __3 = null;
         }
         catch (Exception e)
         {
-            Plugin._Logger.LogError(e);
+            Logger.LogError(e);
         }
 
     }
