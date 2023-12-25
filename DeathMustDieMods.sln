@@ -6,6 +6,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoreBoons", "MoreBoons\More
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoreStashTabs", "MoreStashTabs\MoreStashTabs.csproj", "{A70BD76F-7333-4B33-A968-F653297F3CFA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarCruxExpansion", "StarCruxExpansion\StarCruxExpansion.csproj", "{57D4E656-A15B-456B-91F4-4387C23466B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongerGames", "LongerGames\LongerGames.csproj", "{0967CBD6-A4C2-4B72-AE93-A5F2B4CD9800}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +28,13 @@ Global
 		{A70BD76F-7333-4B33-A968-F653297F3CFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A70BD76F-7333-4B33-A968-F653297F3CFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A70BD76F-7333-4B33-A968-F653297F3CFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57D4E656-A15B-456B-91F4-4387C23466B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57D4E656-A15B-456B-91F4-4387C23466B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57D4E656-A15B-456B-91F4-4387C23466B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57D4E656-A15B-456B-91F4-4387C23466B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0967CBD6-A4C2-4B72-AE93-A5F2B4CD9800}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0967CBD6-A4C2-4B72-AE93-A5F2B4CD9800}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0967CBD6-A4C2-4B72-AE93-A5F2B4CD9800}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0967CBD6-A4C2-4B72-AE93-A5F2B4CD9800}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
