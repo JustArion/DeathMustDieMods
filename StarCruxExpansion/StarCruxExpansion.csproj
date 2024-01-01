@@ -12,6 +12,7 @@
         https://nuget.bepinex.dev/v3/index.json;
         https://nuget.samboy.dev/v3/index.json
     </RestoreAdditionalProjectSources>
+    <Nullable>enable</Nullable>
 </PropertyGroup>
 
 <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -42,6 +43,22 @@
     </Reference>
     <Reference Include="Death.Utils">
         <HintPath>D:\Games\Death Must Die\Death Must Die_Data\Managed\Death.Utils.dll</HintPath>
+        <Private>false</Private>
+    </Reference>
+    <Reference Include="Claw.UserInterface">
+        <HintPath>D:\Games\Death Must Die\Death Must Die_Data\Managed\Claw.UserInterface.dll</HintPath>
+        <Private>false</Private>
+    </Reference>
+    <Reference Include="UniTask">
+      <HintPath>D:\Games\Death Must Die\Death Must Die_Data\Managed\UniTask.dll</HintPath>
+        <Private>false</Private>
+    </Reference>
+    <Reference Include="Unity.Localization">
+      <HintPath>D:\Games\Death Must Die\Death Must Die_Data\Managed\Unity.Localization.dll</HintPath>
+        <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>D:\Games\Death Must Die\Death Must Die_Data\Managed\UnityEngine.UI.dll</HintPath>
         <Private>false</Private>
     </Reference>
 </ItemGroup>

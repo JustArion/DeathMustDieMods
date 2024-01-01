@@ -17,8 +17,11 @@ public class StarCruxVerifier
 
         if (!retVal)
         {
-            Logger.LogWarning($"Unexpected Star Crux Values for '{Code}'. Expected [Max: {challenge.MaxLevel}, PPL: {challenge.PointsPerLevel}], " +
-                              $"Got: [Max: {MaxLevel}, PPL: {PointsPerLevel}]");
+            Logger.LogWarning($"""
+                               Unexpected Star Crux Values for '{Code}'.
+                               Expected [Max: {challenge.MaxLevel}, PPL: {challenge.PointsPerLevel}],
+                               Got: [Max: {MaxLevel}, PPL: {PointsPerLevel}]
+                               """);
         }
 
         return retVal;

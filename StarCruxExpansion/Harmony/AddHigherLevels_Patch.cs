@@ -23,12 +23,19 @@ public class AddHigherLevels_Patch
     [UsedImplicitly]
     private static bool Prefix(string code, ref int maxLevel, ref int pointsPerLevel, int winsToUnlock, string iconPath, List<ChallengeData.Effect> effects)
     {
-        // Logger.LogDebug($"{nameof(AddHigherLevels_Patch)}: Code: {code}, MaxLevel: {maxLevel}, PointsPerLevel: {pointsPerLevel}, WinsToUnlock: {winsToUnlock}, IconPath: {iconPath}, Effects: {effects.Count}");
+        try
+        {
+            // Logger.LogDebug($"{nameof(AddHigherLevels_Patch)}: Code: {code}, MaxLevel: {maxLevel}, PointsPerLevel: {pointsPerLevel}, WinsToUnlock: {winsToUnlock}, IconPath: {iconPath}, Effects: {effects.Count}");
 
-        if (!StarCruxVerifier.IsExpectedStarCruxChallenge(code, maxLevel, pointsPerLevel))
-            return true;
-        
-        StarCruxModifier.ModifyChallengeData(code, ref maxLevel, ref pointsPerLevel);
+            if (!StarCruxVerifier.IsExpectedStarCruxChallenge(code, maxLevel, pointsPerLevel))
+                return true;
+
+            StarCruxModifier.ModifyChallengeData(code, ref maxLevel, ref pointsPerLevel);
+        }
+        catch (Exception e)
+        {
+            Logger.LogError(e);
+        }
         
         return true;
     }
