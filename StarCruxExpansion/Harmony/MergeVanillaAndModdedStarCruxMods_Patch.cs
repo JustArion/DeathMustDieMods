@@ -4,6 +4,7 @@ using Death.App;
 using Death.Data;
 using Death.Run.Core;
 using Death.TimesRealm.UserInterface.Darkness;
+using Helpers;
 using JetBrains.Annotations;
 using UI;
 
@@ -29,11 +30,12 @@ public class MergeVanillaAndModdedStarCruxMods_Patch
     {
         var character = new CharacterSetup(profile.Progression.SelectedCharacterCode, profile.Progression.GetTraitFor(profile.Progression.SelectedCharacterCode));
         var waveData = Database.WaveData;
-        var vanillaDarkness = profile.Darkness;
+        var targetDarkness = profile.Darkness;
         
-        foreach (var moddedRealm in ModdedRealmManager._moddedRealms)
-        {
-            moddedRealm.Value._options.
-        }
+        foreach (var moddedRealm in ModdedRealmManager._moddedRealms) 
+            moddedRealm.Challenges.CopyTo(targetDarkness);
+        
+        
+        return new RunOptions(character, waveData, targetDarkness); 
     }
 }

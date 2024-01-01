@@ -35,7 +35,7 @@ internal static class PrivateFieldsHelper
     {
         
         Expression resultExpression;
-        ParameterExpression? parameter = null;
+        ParameterExpression parameter = null;
         Type funcType;
 
         if (field.IsStatic)
@@ -69,4 +69,16 @@ internal static class PrivateFieldsHelper
         var result = lambda.Compile();
         return result;
     }  
+    
+    public static Lazy<Func<TInstance, TReturnType>> CreateFieldGetterDelegate<TInstance, TReturnType>(string fieldName) where TInstance : class
+    {
+        var fieldInfo = typeof(TInstance).GetField(fieldName, BindingFlags.NonPublic | BindingFlags.Instance);
+
+        if (fieldInfo != null)
+            return new Lazy<Func<TInstance, TReturnType>>(() => fieldInfo.CreateFieldGetter<TInstance, TReturnType>());
+        
+        
+        Logger.LogError($"Unable to find field {fieldName}.");
+        throw new NullReferenceException(nameof(fieldInfo));
+    }
 }

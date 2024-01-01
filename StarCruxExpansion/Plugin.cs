@@ -2,8 +2,10 @@
 
 namespace Dawn.DMD.StarCruxExpansion;
 
+using System.Collections.Generic;
 using System.Reflection;
 using BepInEx.Logging;
+using Death.Darkness;
 using Harmony;
 using Helpers;
 using JetBrains.Annotations;
@@ -24,6 +26,20 @@ public class Plugin : BaseUnityPlugin
         HarmonyLib.Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly());
 
         InterceptStarCruxUI_Patch.OnDarknessInit += darkness => darkness.AddComponent<ModdedRealmManager>();
-        ModdedRealmManager.AddModdedRealm("Debug Realm", new ModdedDarknessController());
+
+        var debugRealm = GenerateDebugRealm();
+
+        ModdedRealmManager.AddModdedRealm(debugRealm);
     }
+
+    private RealmData GenerateDebugRealm()
+    {
+        return new RealmData("Debug Realm", new[]
+        {
+            new ChallengeDataInformation(new ChallengeDataTextInformation("Debug Title", "Debug Descriptions have {0:stat(per|0.#|%|s|u)} more epicness"),
+                new ChallengeData("sce_debug", 10, 1, 0, ChallengeDataEx.ToIconPath(ChallengeDataEx.ChallengeDataIcon.Velocity),
+                    []))
+        });
+    }
+    
 }

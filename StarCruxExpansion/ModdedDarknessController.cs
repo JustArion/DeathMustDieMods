@@ -6,7 +6,7 @@ using Death.Data.Tables;
 using Death.Unlockables;
 using Harmony;
 
-public abstract class ModdedDarknessController(DarknessOptions options, IEnumerable<ChallengeData> challengeData) : IDarknessController
+public class ModdedDarknessController(DarknessOptions options, IEnumerable<ChallengeData> challengeData) : IDarknessController
 // public abstract class ModdedDarknessController(DarknessOptions options, IEnumerable<ChallengeData> challengeData, DarknessDropBonus dropBonus, Unlocks unlocks) : IDarknessController
 {
     protected readonly DarknessOptions _options = options;
@@ -49,7 +49,7 @@ public abstract class ModdedDarknessController(DarknessOptions options, IEnumera
 
     public virtual bool CanDecreaseLevel(ChallengeData challenge) => _options.GetLevel(challenge.Code) > 0;
 
-    public virtual int MaxPoints => _dropBonus.MaxPoints;
+    public virtual int MaxPoints { get; } = new Lazy<int>(() => challengeData.Sum(challenge => challenge.MaxLevel)).Value;
     public virtual int TotalPoints => _options.GetTotalPoints();
 
     int IDarknessController.MaxPoints => MaxPoints + InterceptStarCruxData_Patch.VanillaDarknessController.MaxPoints;

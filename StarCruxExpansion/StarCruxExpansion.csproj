@@ -12,7 +12,7 @@
         https://nuget.bepinex.dev/v3/index.json;
         https://nuget.samboy.dev/v3/index.json
     </RestoreAdditionalProjectSources>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
 </PropertyGroup>
 
 <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -55,6 +55,10 @@
     </Reference>
     <Reference Include="Unity.Localization">
       <HintPath>D:\Games\Death Must Die\Death Must Die_Data\Managed\Unity.Localization.dll</HintPath>
+        <Private>false</Private>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>D:\Games\Death Must Die\Death Must Die_Data\Managed\Unity.TextMeshPro.dll</HintPath>
         <Private>false</Private>
     </Reference>
     <Reference Include="UnityEngine.UI">

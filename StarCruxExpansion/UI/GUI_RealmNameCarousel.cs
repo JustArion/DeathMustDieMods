@@ -29,8 +29,8 @@ public class GUI_RealmNameCarousel : MonoBehaviour
 
         AddRealmName(string.Empty, ResetToDefaultRealm);
 
-        NextRealmButton.onClick.AddListener(NavigateNextRealm);
-        PreviousRealmButton.onClick.AddListener(NavigatePreviousRealm);
+        NextRealmButton.onClick.AddListener(Internal_NavigateNextRealm);
+        PreviousRealmButton.onClick.AddListener(Internal_NavigatePrevious);
     }
 
     private void OnDestroy()
@@ -40,9 +40,19 @@ public class GUI_RealmNameCarousel : MonoBehaviour
         Destroy(PreviousRealmButton.gameObject);
     }
 
-    public void NavigateNextRealm()
+    private void Internal_NavigateNextRealm() => NavigateNextRealm();
+    private void Internal_NavigatePrevious() => NavigatePreviousRealm();
+    public bool NavigateNextRealm()
     {
+        var previousIndex = _index;
         IncrementIndex();
+
+        if (previousIndex == _index)
+        {
+            Plugin.Logger.LogDebug("Did not navigate to next realm, since there is none.");
+            return false; // Did not increment, there's only 1 realm page.
+        }
+        
         var (realmName, navigationCallbacks) = RealmNames[_index];
 
 
@@ -51,11 +61,20 @@ public class GUI_RealmNameCarousel : MonoBehaviour
 
         SetText(realmName);
         navigationCallbacks.ForEach(x => ExceptionWrappers.Wrap(() => x(realmName), Plugin.Logger.LogError));
+        return true;
     }
 
-    public void NavigatePreviousRealm()
+    public bool NavigatePreviousRealm()
     {
+        var previousIndex = _index;
         DecrementIndex();
+
+        if (previousIndex == _index)
+        {
+            Plugin.Logger.LogDebug("Did not navigate to previous realm, since there is none.");
+            return false; // Did not increment, there's only 1 realm page.
+        }
+        
         var (realmName, navigationCallbacks) = RealmNames[_index];
 
 
@@ -64,6 +83,7 @@ public class GUI_RealmNameCarousel : MonoBehaviour
         
         SetText(realmName);
         navigationCallbacks.ForEach(x => ExceptionWrappers.Wrap(() => x(realmName), Plugin.Logger.LogError));
+        return true;
     }
 
     private void SetText(string text) => _Text_Name.OnUpdateString.Invoke(text);

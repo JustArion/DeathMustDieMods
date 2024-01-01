@@ -1,14 +1,16 @@
 ﻿namespace Dawn.DMD.StarCruxExpansion;
 
 using System.Collections.Generic;
+using UI;
 
 public class StarCruxVerifier
 {
     public static bool IsExpectedStarCruxChallenge(string Code, int MaxLevel, int PointsPerLevel)
     {
+        
         if (!ExpectedChallenges.TryGetValue(Code, out var challenge))
         {
-            Logger.LogWarning($"Unknown Star Crux Code: '{Code}', Values: [{PointsPerLevel}, {MaxLevel}]");
+            Logger.LogDebug($"Unknown / Modded Star Crux Code: '{Code}', Values: [{PointsPerLevel}, {MaxLevel}]");
             return false;
         }
 

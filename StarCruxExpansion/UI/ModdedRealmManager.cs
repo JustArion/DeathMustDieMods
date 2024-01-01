@@ -6,6 +6,7 @@ using Cysharp.Threading.Tasks;
 using Death.Darkness;
 using Death.TimesRealm.UserInterface.Darkness;
 using Harmony;
+using Helpers;
 using Reflection;
 using UnityEngine;
 
@@ -13,12 +14,15 @@ using UnityEngine;
 [DisallowMultipleComponent]
 public class ModdedRealmManager : MonoBehaviour
 {
-    internal static readonly Dictionary<string, HashSet<ChallengeData>> _moddedRealms = new();
+    internal static readonly List<RealmData> _moddedRealms = [];
+
+    internal static readonly HashSet<ChallengeDataInformation> _allModdedChallenges = [];    
 
     private Screen_Darkness _darknessManager;
     private GUI_Darkness _darknessGui;
     private GUI_RealmNameCarousel _realmNameCarousel;
     private ModdedDarknessController _darknessController;
+    private AffordanceHandler _affordanceHandler;
     
     
     public void Awake()
@@ -36,26 +40,29 @@ public class ModdedRealmManager : MonoBehaviour
         _realmNameCarousel.SubscribeToDefaultRealm(ReturnToOuterCircle);
         
         foreach (var realm in _moddedRealms) 
-            _realmNameCarousel.AddRealmName(realm.Key, OnRealmNavigate);
-        
-        
+            _realmNameCarousel.AddRealmName(realm.RealmName, OnRealmNavigate);
     }
+
+    public bool HasPages => _moddedRealms.Count > 1;
 
     public void OnRealmNavigate(string realmName)
     {
-        if (!_moddedRealms.TryGetValue(realmName, out var realmController))
+        var realm = _moddedRealms.FirstOrDefault(x => x.RealmName == realmName);
+        if (realm == null)
         {
             Plugin.Logger.LogWarning($"Realm controller not found for realm '{realmName}'");
             return;
         }
 
-        _darknessGui.SetDataAsync(realmController).Forget();
+        var challengeData = realm.Challenges.ToArray();
+
+        _darknessGui.SetDataAsync(_darknessController = new(challengeData.ToDarknessOptions(), challengeData)).Forget();
     }
 
 
-    public void NavigateToNextRealm() => _realmNameCarousel.NavigateNextRealm();
+    public bool NavigateToNextRealm() => _realmNameCarousel.NavigateNextRealm();
 
-    public void NavigateToPreviousRealm() => _realmNameCarousel.NavigatePreviousRealm();
+    public bool NavigateToPreviousRealm() => _realmNameCarousel.NavigatePreviousRealm();
 
 
     private void ReturnToOuterCircle()
@@ -67,16 +74,26 @@ public class ModdedRealmManager : MonoBehaviour
     private void OnDestroy() => Destroy(_realmNameCarousel);
 
 
-    public static void AddModdedRealm(string realmName, params ChallengeData[] challengeData)
+    public static void AddModdedRealm(RealmData realmData)
     {
-        if (string.IsNullOrWhiteSpace(realmName))
+        if (string.IsNullOrWhiteSpace(realmData.RealmName))
         {
             Plugin.Logger.LogWarning("You can not add a realm with a null or empty name!");
             return;
         }
 
-        _moddedRealms.Add(realmName, challengeData.ToHashSet());
-        Plugin.Logger.LogDebug($"Added realm {realmName} with {challengeData.Length} challenges");
+        if (!realmData.Challenges.Any())
+        {
+            Plugin.Logger.LogWarning("You can not add a realm with no challenges!");
+            return; 
+        }
+
+        _moddedRealms.Add(realmData);
+        
+        foreach (var challengeData in realmData.ChallengesInformation) 
+            _allModdedChallenges.Add(challengeData);
+        
+        Plugin.Logger.LogDebug($"Added realm {realmData.RealmName} with {realmData.Challenges.Count()} challenges");
         Plugin.Logger.LogDebug($"Total modded realms: {_moddedRealms.Count}");
     }
 
@@ -88,6 +105,17 @@ public class ModdedRealmManager : MonoBehaviour
             return;
         }
 
-        _moddedRealms.Remove(realmName);
+        var realm = _moddedRealms.FirstOrDefault(x => x.RealmName == realmName);
+
+        if (realm == null)
+        {
+            Plugin.Logger.LogWarning($"Realm '{realmName}' not found!");
+            return;
+        }
+        
+        _moddedRealms.Remove(realm);
+        
+        foreach (var challengeData in realm.ChallengesInformation) 
+            _allModdedChallenges.Remove(challengeData);
     }
 }
