@@ -3,9 +3,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using Death.Darkness;
+using Helpers;
 
 public class RealmData(string realmName, IEnumerable<ChallengeDataInformation> challenges) : IEnumerable<ChallengeData>
 {
+    internal DarknessOptions _options = challenges.Select(x => x.ChallengeData).ToDarknessOptions();
     public string RealmName { get; } = realmName;
 
     public IEnumerable<ChallengeDataInformation> ChallengesInformation => challenges;
