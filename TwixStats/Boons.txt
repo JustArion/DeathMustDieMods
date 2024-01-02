@@ -1,0 +1,446 @@
+﻿Empyrean
+Code: UndamagedTakeMore, Rarity: Legend, Stats: Skill, NA, P, Passive, Self, UndamagedTakeMore
+Code: DashCharges, Rarity: Legend, Stats: Skill, NA, P, Passive, Self, DashCharges
+Code: DashBoost, Rarity: Novice, Stats: Skill, NA, P, Passive, Self, DashBoost
+Code: DashBoost, Rarity: Adept, Stats: Skill, NA, P, Passive, Self, DashBoost
+Code: DashBoost, Rarity: Expert, Stats: Skill, NA, P, Passive, Self, DashBoost
+Code: DashBoost, Rarity: Master, Stats: Skill, NA, P, Passive, Self, DashBoost
+Code: AttackSpeed, Rarity: Novice, Stats: Skill, NA, P, Passive, Self, AttackSpeed
+Code: AttackSpeed, Rarity: Adept, Stats: Skill, NA, P, Passive, Self, AttackSpeed
+Code: AttackSpeed, Rarity: Expert, Stats: Skill, NA, P, Passive, Self, AttackSpeed
+Code: AttackSpeed, Rarity: Master, Stats: Skill, NA, P, Passive, Self, AttackSpeed
+Code: AttackArea, Rarity: Novice, Stats: Skill, NA, P, Passive, Self, AttackArea
+Code: AttackArea, Rarity: Adept, Stats: Skill, NA, P, Passive, Self, AttackArea
+Code: AttackArea, Rarity: Expert, Stats: Skill, NA, P, Passive, Self, AttackArea
+Code: AttackArea, Rarity: Master, Stats: Skill, NA, P, Passive, Self, AttackArea
+Code: AttackCount, Rarity: Novice, Stats: Skill, NA, P, Passive, Self, AttackCount
+Code: AttackCount, Rarity: Adept, Stats: Skill, NA, P, Passive, Self, AttackCount
+Code: AttackCount, Rarity: Expert, Stats: Skill, NA, P, Passive, Self, AttackCount
+Code: AttackCount, Rarity: Master, Stats: Skill, NA, P, Passive, Self, AttackCount
+Code: AttackCritChance, Rarity: Novice, Stats: Skill, NA, P, Passive, Self, AttackCritChance
+Code: AttackCritChance, Rarity: Adept, Stats: Skill, NA, P, Passive, Self, AttackCritChance
+Code: AttackCritChance, Rarity: Expert, Stats: Skill, NA, P, Passive, Self, AttackCritChance
+Code: AttackCritChance, Rarity: Master, Stats: Skill, NA, P, Passive, Self, AttackCritChance
+Code: BoonEvasion, Rarity: Novice, Stats: Skill, NA, P, Passive, Self, BoonEvasion
+Code: BoonEvasion, Rarity: Adept, Stats: Skill, NA, P, Passive, Self, BoonEvasion
+Code: BoonEvasion, Rarity: Expert, Stats: Skill, NA, P, Passive, Self, BoonEvasion
+Code: BoonEvasion, Rarity: Master, Stats: Skill, NA, P, Passive, Self, BoonEvasion
+Code: BoonLife, Rarity: Novice, Stats: Skill, NA, P, Passive, Self, BoonLife
+Code: BoonLife, Rarity: Adept, Stats: Skill, NA, P, Passive, Self, BoonLife
+Code: BoonLife, Rarity: Expert, Stats: Skill, NA, P, Passive, Self, BoonLife
+Code: BoonLife, Rarity: Master, Stats: Skill, NA, P, Passive, Self, BoonLife
+Code: BoonDice, Rarity: Novice, Stats: Skill, NA, P, Passive, Self, BoonDice
+Code: BoonDice, Rarity: Adept, Stats: Skill, NA, P, Passive, Self, BoonDice
+Code: BoonDice, Rarity: Expert, Stats: Skill, NA, P, Passive, Self, BoonDice
+Code: BoonDice, Rarity: Master, Stats: Skill, NA, P, Passive, Self, BoonDice
+Code: MorePickups, Rarity: Novice, Stats: Skill, NA, P, Passive, Self, MorePickups
+Code: MorePickups, Rarity: Adept, Stats: Skill, NA, P, Passive, Self, MorePickups
+Code: MorePickups, Rarity: Expert, Stats: Skill, NA, P, Passive, Self, MorePickups
+Code: MorePickups, Rarity: Master, Stats: Skill, NA, P, Passive, Self, MorePickups
+
+Vengeance
+Code: DashVen, Rarity: Novice, Stats: Skill, NA, D, Dash, DashVen
+Code: DashVen, Rarity: Adept, Stats: Skill, NA, D, Dash, DashVen
+Code: DashVen, Rarity: Expert, Stats: Skill, NA, D, Dash, DashVen
+Code: DashVen, Rarity: Master, Stats: Skill, NA, D, Dash, DashVen
+Code: DashVenRanged, Rarity: Novice, Stats: Skill, NA, D, Dash, DashVenRanged
+Code: DashVenRanged, Rarity: Adept, Stats: Skill, NA, D, Dash, DashVenRanged
+Code: DashVenRanged, Rarity: Expert, Stats: Skill, NA, D, Dash, DashVenRanged
+Code: DashVenRanged, Rarity: Master, Stats: Skill, NA, D, Dash, DashVenRanged
+Code: BoonDamage, Rarity: Novice, Stats: Skill, NA, P, Passive, Self, BoonDamage
+Code: BoonDamage, Rarity: Adept, Stats: Skill, NA, P, Passive, Self, BoonDamage
+Code: BoonDamage, Rarity: Expert, Stats: Skill, NA, P, Passive, Self, BoonDamage
+Code: BoonDamage, Rarity: Master, Stats: Skill, NA, P, Passive, Self, BoonDamage
+Code: XpForDmgInstances, Rarity: Legend, Stats: Skill, NA, P, Passive, Self, XpForDmgInstances
+Code: FireNova, Rarity: Legend, Stats: Skill, NA, P, Autocast, FireNova
+Code: CorpseBurn, Rarity: Novice, Stats: Skill, NA, P, Passive, Aura, CorpseBurn
+Code: CorpseBurn, Rarity: Adept, Stats: Skill, NA, P, Passive, Aura, CorpseBurn
+Code: CorpseBurn, Rarity: Expert, Stats: Skill, NA, P, Passive, Aura, CorpseBurn
+Code: CorpseBurn, Rarity: Master, Stats: Skill, NA, P, Passive, Aura, CorpseBurn
+Code: Meteor, Rarity: Novice, Stats: Skill, NA, P, Autocast, Meteor
+Code: Meteor, Rarity: Adept, Stats: Skill, NA, P, Autocast, Meteor
+Code: Meteor, Rarity: Expert, Stats: Skill, NA, P, Autocast, Meteor
+Code: Meteor, Rarity: Master, Stats: Skill, NA, P, Autocast, Meteor
+Code: BreathOfFire, Rarity: Novice, Stats: Skill, NA, P, Autocast, BreathOfFire
+Code: BreathOfFire, Rarity: Adept, Stats: Skill, NA, P, Autocast, BreathOfFire
+Code: BreathOfFire, Rarity: Expert, Stats: Skill, NA, P, Autocast, BreathOfFire
+Code: BreathOfFire, Rarity: Master, Stats: Skill, NA, P, Autocast, BreathOfFire
+Code: FireboltReact, Rarity: Novice, Stats: Skill, NA, P, Passive, Self, FireboltReact
+Code: FireboltReact, Rarity: Adept, Stats: Skill, NA, P, Passive, Self, FireboltReact
+Code: FireboltReact, Rarity: Expert, Stats: Skill, NA, P, Passive, Self, FireboltReact
+Code: FireboltReact, Rarity: Master, Stats: Skill, NA, P, Passive, Self, FireboltReact
+Code: CorpseExplode, Rarity: Novice, Stats: Skill, NA, P, Passive, Aura, CorpseExplode
+Code: CorpseExplode, Rarity: Adept, Stats: Skill, NA, P, Passive, Aura, CorpseExplode
+Code: CorpseExplode, Rarity: Expert, Stats: Skill, NA, P, Passive, Aura, CorpseExplode
+Code: CorpseExplode, Rarity: Master, Stats: Skill, NA, P, Passive, Aura, CorpseExplode
+Code: DragonFire, Rarity: Legend, Stats: Skill, NA, P, Summon, DragonFire
+Code: AtVenAssassin, Rarity: Novice, Stats: Skill, A, AtVenAssassin
+Code: AtVenAssassin, Rarity: Adept, Stats: Skill, A, AtVenAssassin
+Code: AtVenAssassin, Rarity: Expert, Stats: Skill, A, AtVenAssassin
+Code: AtVenAssassin, Rarity: Master, Stats: Skill, A, AtVenAssassin
+Code: AtVenBarbarian, Rarity: Novice, Stats: Skill, A, AtVenBarbarian
+Code: AtVenBarbarian, Rarity: Adept, Stats: Skill, A, AtVenBarbarian
+Code: AtVenBarbarian, Rarity: Expert, Stats: Skill, A, AtVenBarbarian
+Code: AtVenBarbarian, Rarity: Master, Stats: Skill, A, AtVenBarbarian
+Code: AtVenKnight, Rarity: Novice, Stats: Skill, A, AtVenKnight
+Code: AtVenKnight, Rarity: Adept, Stats: Skill, A, AtVenKnight
+Code: AtVenKnight, Rarity: Expert, Stats: Skill, A, AtVenKnight
+Code: AtVenKnight, Rarity: Master, Stats: Skill, A, AtVenKnight
+Code: AtVenWarrior, Rarity: Novice, Stats: Skill, A, AtVenWarrior
+Code: AtVenWarrior, Rarity: Adept, Stats: Skill, A, AtVenWarrior
+Code: AtVenWarrior, Rarity: Expert, Stats: Skill, A, AtVenWarrior
+Code: AtVenWarrior, Rarity: Master, Stats: Skill, A, AtVenWarrior
+Code: AtVenSorceress, Rarity: Novice, Stats: Skill, A, AtVenSorceress
+Code: AtVenSorceress, Rarity: Adept, Stats: Skill, A, AtVenSorceress
+Code: AtVenSorceress, Rarity: Expert, Stats: Skill, A, AtVenSorceress
+Code: AtVenSorceress, Rarity: Master, Stats: Skill, A, AtVenSorceress
+
+Conquest
+Code: DashCon, Rarity: Novice, Stats: Skill, NA, D, Dash, DashCon
+Code: DashCon, Rarity: Adept, Stats: Skill, NA, D, Dash, DashCon
+Code: DashCon, Rarity: Expert, Stats: Skill, NA, D, Dash, DashCon
+Code: DashCon, Rarity: Master, Stats: Skill, NA, D, Dash, DashCon
+Code: DashConRanged, Rarity: Novice, Stats: Skill, NA, D, Dash, DashConRanged
+Code: DashConRanged, Rarity: Adept, Stats: Skill, NA, D, Dash, DashConRanged
+Code: DashConRanged, Rarity: Expert, Stats: Skill, NA, D, Dash, DashConRanged
+Code: DashConRanged, Rarity: Master, Stats: Skill, NA, D, Dash, DashConRanged
+Code: LessStunThr, Rarity: Novice, Stats: Skill, NA, P, Passive, Self, LessStunThr
+Code: LessStunThr, Rarity: Adept, Stats: Skill, NA, P, Passive, Self, LessStunThr
+Code: LessStunThr, Rarity: Expert, Stats: Skill, NA, P, Passive, Self, LessStunThr
+Code: LessStunThr, Rarity: Master, Stats: Skill, NA, P, Passive, Self, LessStunThr
+Code: GodOfWar, Rarity: Legend, Stats: Skill, NA, P, Passive, Self, GodOfWar
+Code: Execute, Rarity: Legend, Stats: Skill, NA, P, Passive, Self, Execute
+Code: Hemorrhage, Rarity: Legend, Stats: Skill, NA, P, Passive, Aura, Hemorrhage
+Code: Bloodlust, Rarity: Novice, Stats: Skill, NA, P, Passive, Self, Bloodlust
+Code: Bloodlust, Rarity: Adept, Stats: Skill, NA, P, Passive, Self, Bloodlust
+Code: Bloodlust, Rarity: Expert, Stats: Skill, NA, P, Passive, Self, Bloodlust
+Code: Bloodlust, Rarity: Master, Stats: Skill, NA, P, Passive, Self, Bloodlust
+Code: KbackMore, Rarity: Novice, Stats: Skill, NA, P, Passive, Self, KbackMore
+Code: KbackMore, Rarity: Adept, Stats: Skill, NA, P, Passive, Self, KbackMore
+Code: KbackMore, Rarity: Expert, Stats: Skill, NA, P, Passive, Self, KbackMore
+Code: KbackMore, Rarity: Master, Stats: Skill, NA, P, Passive, Self, KbackMore
+Code: WarChains, Rarity: Novice, Stats: Skill, NA, P, Autocast, WarChains
+Code: WarChains, Rarity: Adept, Stats: Skill, NA, P, Autocast, WarChains
+Code: WarChains, Rarity: Expert, Stats: Skill, NA, P, Autocast, WarChains
+Code: WarChains, Rarity: Master, Stats: Skill, NA, P, Autocast, WarChains
+Code: WarChainsRan, Rarity: Novice, Stats: Skill, NA, P, Autocast, WarChainsRan
+Code: WarChainsRan, Rarity: Adept, Stats: Skill, NA, P, Autocast, WarChainsRan
+Code: WarChainsRan, Rarity: Expert, Stats: Skill, NA, P, Autocast, WarChainsRan
+Code: WarChainsRan, Rarity: Master, Stats: Skill, NA, P, Autocast, WarChainsRan
+Code: Shurikens, Rarity: Novice, Stats: Skill, NA, P, Autocast, Shurikens
+Code: Shurikens, Rarity: Adept, Stats: Skill, NA, P, Autocast, Shurikens
+Code: Shurikens, Rarity: Expert, Stats: Skill, NA, P, Autocast, Shurikens
+Code: Shurikens, Rarity: Master, Stats: Skill, NA, P, Autocast, Shurikens
+Code: Blades, Rarity: Novice, Stats: Skill, NA, P, Autocast, Blades
+Code: Blades, Rarity: Adept, Stats: Skill, NA, P, Autocast, Blades
+Code: Blades, Rarity: Expert, Stats: Skill, NA, P, Autocast, Blades
+Code: Blades, Rarity: Master, Stats: Skill, NA, P, Autocast, Blades
+Code: AtConAssassin, Rarity: Novice, Stats: Skill, A, AtConAssassin
+Code: AtConAssassin, Rarity: Adept, Stats: Skill, A, AtConAssassin
+Code: AtConAssassin, Rarity: Expert, Stats: Skill, A, AtConAssassin
+Code: AtConAssassin, Rarity: Master, Stats: Skill, A, AtConAssassin
+Code: AtConBarbarian, Rarity: Novice, Stats: Skill, A, AtConBarbarian
+Code: AtConBarbarian, Rarity: Adept, Stats: Skill, A, AtConBarbarian
+Code: AtConBarbarian, Rarity: Expert, Stats: Skill, A, AtConBarbarian
+Code: AtConBarbarian, Rarity: Master, Stats: Skill, A, AtConBarbarian
+Code: AtConKnight, Rarity: Novice, Stats: Skill, A, AtConKnight
+Code: AtConKnight, Rarity: Adept, Stats: Skill, A, AtConKnight
+Code: AtConKnight, Rarity: Expert, Stats: Skill, A, AtConKnight
+Code: AtConKnight, Rarity: Master, Stats: Skill, A, AtConKnight
+Code: AtConWarrior, Rarity: Novice, Stats: Skill, A, AtConWarrior
+Code: AtConWarrior, Rarity: Adept, Stats: Skill, A, AtConWarrior
+Code: AtConWarrior, Rarity: Expert, Stats: Skill, A, AtConWarrior
+Code: AtConWarrior, Rarity: Master, Stats: Skill, A, AtConWarrior
+Code: AtConSorceress, Rarity: Novice, Stats: Skill, A, AtConSorceress
+Code: AtConSorceress, Rarity: Adept, Stats: Skill, A, AtConSorceress
+Code: AtConSorceress, Rarity: Expert, Stats: Skill, A, AtConSorceress
+Code: AtConSorceress, Rarity: Master, Stats: Skill, A, AtConSorceress
+
+Mort
+Code: DashMor, Rarity: Novice, Stats: Skill, NA, D, Dash, DashMor
+Code: DashMor, Rarity: Adept, Stats: Skill, NA, D, Dash, DashMor
+Code: DashMor, Rarity: Expert, Stats: Skill, NA, D, Dash, DashMor
+Code: DashMor, Rarity: Master, Stats: Skill, NA, D, Dash, DashMor
+Code: DashMorRanged, Rarity: Novice, Stats: Skill, NA, D, Dash, DashMorRanged
+Code: DashMorRanged, Rarity: Adept, Stats: Skill, NA, D, Dash, DashMorRanged
+Code: DashMorRanged, Rarity: Expert, Stats: Skill, NA, D, Dash, DashMorRanged
+Code: DashMorRanged, Rarity: Master, Stats: Skill, NA, D, Dash, DashMorRanged
+Code: BoonLuck, Rarity: Novice, Stats: Skill, NA, P, Passive, Self, BoonLuck
+Code: BoonLuck, Rarity: Adept, Stats: Skill, NA, P, Passive, Self, BoonLuck
+Code: BoonLuck, Rarity: Expert, Stats: Skill, NA, P, Passive, Self, BoonLuck
+Code: BoonLuck, Rarity: Master, Stats: Skill, NA, P, Passive, Self, BoonLuck
+Code: Vampirism, Rarity: Legend, Stats: Skill, NA, P, Passive, Self, Vampirism
+Code: Malady, Rarity: Legend, Stats: Skill, NA, P, Passive, Aura, Malady
+Code: DoomDmg, Rarity: Novice, Stats: Skill, NA, P, Passive, Self, DoomDmg
+Code: DoomDmg, Rarity: Adept, Stats: Skill, NA, P, Passive, Self, DoomDmg
+Code: DoomDmg, Rarity: Expert, Stats: Skill, NA, P, Passive, Self, DoomDmg
+Code: DoomDmg, Rarity: Master, Stats: Skill, NA, P, Passive, Self, DoomDmg
+Code: OverkillXp, Rarity: Novice, Stats: Skill, NA, P, Passive, Aura, OverkillXp
+Code: OverkillXp, Rarity: Adept, Stats: Skill, NA, P, Passive, Aura, OverkillXp
+Code: OverkillXp, Rarity: Expert, Stats: Skill, NA, P, Passive, Aura, OverkillXp
+Code: OverkillXp, Rarity: Master, Stats: Skill, NA, P, Passive, Aura, OverkillXp
+Code: Ravens, Rarity: Novice, Stats: Skill, NA, P, Summon, Ravens
+Code: Ravens, Rarity: Adept, Stats: Skill, NA, P, Summon, Ravens
+Code: Ravens, Rarity: Expert, Stats: Skill, NA, P, Summon, Ravens
+Code: Ravens, Rarity: Master, Stats: Skill, NA, P, Summon, Ravens
+Code: Necromancy, Rarity: Novice, Stats: Skill, NA, P, Summon, Necromancy
+Code: Necromancy, Rarity: Adept, Stats: Skill, NA, P, Summon, Necromancy
+Code: Necromancy, Rarity: Expert, Stats: Skill, NA, P, Summon, Necromancy
+Code: Necromancy, Rarity: Master, Stats: Skill, NA, P, Summon, Necromancy
+Code: Phantoms, Rarity: Novice, Stats: Skill, NA, P, Summon, Phantoms
+Code: Phantoms, Rarity: Adept, Stats: Skill, NA, P, Summon, Phantoms
+Code: Phantoms, Rarity: Expert, Stats: Skill, NA, P, Summon, Phantoms
+Code: Phantoms, Rarity: Master, Stats: Skill, NA, P, Summon, Phantoms
+Code: Sickles, Rarity: Novice, Stats: Skill, NA, P, Autocast, Sickles
+Code: Sickles, Rarity: Adept, Stats: Skill, NA, P, Autocast, Sickles
+Code: Sickles, Rarity: Expert, Stats: Skill, NA, P, Autocast, Sickles
+Code: Sickles, Rarity: Master, Stats: Skill, NA, P, Autocast, Sickles
+Code: AtMorAssassin, Rarity: Novice, Stats: Skill, A, AtMorAssassin
+Code: AtMorAssassin, Rarity: Adept, Stats: Skill, A, AtMorAssassin
+Code: AtMorAssassin, Rarity: Expert, Stats: Skill, A, AtMorAssassin
+Code: AtMorAssassin, Rarity: Master, Stats: Skill, A, AtMorAssassin
+Code: AtMorBarbarian, Rarity: Novice, Stats: Skill, A, AtMorBarbarian
+Code: AtMorBarbarian, Rarity: Adept, Stats: Skill, A, AtMorBarbarian
+Code: AtMorBarbarian, Rarity: Expert, Stats: Skill, A, AtMorBarbarian
+Code: AtMorBarbarian, Rarity: Master, Stats: Skill, A, AtMorBarbarian
+Code: AtMorKnight, Rarity: Novice, Stats: Skill, A, AtMorKnight
+Code: AtMorKnight, Rarity: Adept, Stats: Skill, A, AtMorKnight
+Code: AtMorKnight, Rarity: Expert, Stats: Skill, A, AtMorKnight
+Code: AtMorKnight, Rarity: Master, Stats: Skill, A, AtMorKnight
+Code: AtMorWarrior, Rarity: Novice, Stats: Skill, A, AtMorWarrior
+Code: AtMorWarrior, Rarity: Adept, Stats: Skill, A, AtMorWarrior
+Code: AtMorWarrior, Rarity: Expert, Stats: Skill, A, AtMorWarrior
+Code: AtMorWarrior, Rarity: Master, Stats: Skill, A, AtMorWarrior
+Code: AtMorSorceress, Rarity: Novice, Stats: Skill, A, AtMorSorceress
+Code: AtMorSorceress, Rarity: Adept, Stats: Skill, A, AtMorSorceress
+Code: AtMorSorceress, Rarity: Expert, Stats: Skill, A, AtMorSorceress
+Code: AtMorSorceress, Rarity: Master, Stats: Skill, A, AtMorSorceress
+
+Serenity
+Code: DashSer, Rarity: Novice, Stats: Skill, NA, D, Dash, DashSer
+Code: DashSer, Rarity: Adept, Stats: Skill, NA, D, Dash, DashSer
+Code: DashSer, Rarity: Expert, Stats: Skill, NA, D, Dash, DashSer
+Code: DashSer, Rarity: Master, Stats: Skill, NA, D, Dash, DashSer
+Code: DashSerRanged, Rarity: Novice, Stats: Skill, NA, D, Dash, DashSerRanged
+Code: DashSerRanged, Rarity: Adept, Stats: Skill, NA, D, Dash, DashSerRanged
+Code: DashSerRanged, Rarity: Expert, Stats: Skill, NA, D, Dash, DashSerRanged
+Code: DashSerRanged, Rarity: Master, Stats: Skill, NA, D, Dash, DashSerRanged
+Code: BoonArea, Rarity: Novice, Stats: Skill, NA, P, Passive, Self, BoonArea
+Code: BoonArea, Rarity: Adept, Stats: Skill, NA, P, Passive, Self, BoonArea
+Code: BoonArea, Rarity: Expert, Stats: Skill, NA, P, Passive, Self, BoonArea
+Code: BoonArea, Rarity: Master, Stats: Skill, NA, P, Passive, Self, BoonArea
+Code: DragonFrost, Rarity: Legend, Stats: Skill, NA, P, Summon, DragonFrost
+Code: StatusedTakeMore, Rarity: Legend, Stats: Skill, NA, P, Passive, Aura, StatusedTakeMore
+Code: WorldFreeze, Rarity: Legend, Stats: Skill, NA, P, Passive, Aura, WorldFreeze
+Code: Shatter, Rarity: Legend, Stats: Skill, NA, P, Passive, Aura, Shatter
+Code: ChillToTheBone, Rarity: Legend, Stats: Skill, NA, P, Passive, Aura, ChillToTheBone
+Code: Immobilization, Rarity: Novice, Stats: Skill, NA, P, Passive, Aura, Immobilization
+Code: Immobilization, Rarity: Adept, Stats: Skill, NA, P, Passive, Aura, Immobilization
+Code: Immobilization, Rarity: Expert, Stats: Skill, NA, P, Passive, Aura, Immobilization
+Code: Immobilization, Rarity: Master, Stats: Skill, NA, P, Passive, Aura, Immobilization
+Code: Thaw, Rarity: Novice, Stats: Skill, NA, P, Passive, Self, Thaw
+Code: Thaw, Rarity: Adept, Stats: Skill, NA, P, Passive, Self, Thaw
+Code: Thaw, Rarity: Expert, Stats: Skill, NA, P, Passive, Self, Thaw
+Code: Thaw, Rarity: Master, Stats: Skill, NA, P, Passive, Self, Thaw
+Code: FrozenTreasure, Rarity: Novice, Stats: Skill, NA, P, Passive, Aura, FrozenTreasure
+Code: FrozenTreasure, Rarity: Adept, Stats: Skill, NA, P, Passive, Aura, FrozenTreasure
+Code: FrozenTreasure, Rarity: Expert, Stats: Skill, NA, P, Passive, Aura, FrozenTreasure
+Code: FrozenTreasure, Rarity: Master, Stats: Skill, NA, P, Passive, Aura, FrozenTreasure
+Code: FreezeZones, Rarity: Novice, Stats: Skill, NA, P, Autocast, FreezeZones
+Code: FreezeZones, Rarity: Adept, Stats: Skill, NA, P, Autocast, FreezeZones
+Code: FreezeZones, Rarity: Expert, Stats: Skill, NA, P, Autocast, FreezeZones
+Code: FreezeZones, Rarity: Master, Stats: Skill, NA, P, Autocast, FreezeZones
+Code: FrostNova, Rarity: Novice, Stats: Skill, NA, P, Autocast, FrostNova
+Code: FrostNova, Rarity: Adept, Stats: Skill, NA, P, Autocast, FrostNova
+Code: FrostNova, Rarity: Expert, Stats: Skill, NA, P, Autocast, FrostNova
+Code: FrostNova, Rarity: Master, Stats: Skill, NA, P, Autocast, FrostNova
+Code: PathOfFrost, Rarity: Novice, Stats: Skill, NA, P, Passive, Self, PathOfFrost
+Code: PathOfFrost, Rarity: Adept, Stats: Skill, NA, P, Passive, Self, PathOfFrost
+Code: PathOfFrost, Rarity: Expert, Stats: Skill, NA, P, Passive, Self, PathOfFrost
+Code: PathOfFrost, Rarity: Master, Stats: Skill, NA, P, Passive, Self, PathOfFrost
+Code: AtSerAssassin, Rarity: Novice, Stats: Skill, A, AtSerAssassin
+Code: AtSerAssassin, Rarity: Adept, Stats: Skill, A, AtSerAssassin
+Code: AtSerAssassin, Rarity: Expert, Stats: Skill, A, AtSerAssassin
+Code: AtSerAssassin, Rarity: Master, Stats: Skill, A, AtSerAssassin
+Code: AtSerBarbarian, Rarity: Novice, Stats: Skill, A, AtSerBarbarian
+Code: AtSerBarbarian, Rarity: Adept, Stats: Skill, A, AtSerBarbarian
+Code: AtSerBarbarian, Rarity: Expert, Stats: Skill, A, AtSerBarbarian
+Code: AtSerBarbarian, Rarity: Master, Stats: Skill, A, AtSerBarbarian
+Code: AtSerKnight, Rarity: Novice, Stats: Skill, A, AtSerKnight
+Code: AtSerKnight, Rarity: Adept, Stats: Skill, A, AtSerKnight
+Code: AtSerKnight, Rarity: Expert, Stats: Skill, A, AtSerKnight
+Code: AtSerKnight, Rarity: Master, Stats: Skill, A, AtSerKnight
+Code: AtSerWarrior, Rarity: Novice, Stats: Skill, A, AtSerWarrior
+Code: AtSerWarrior, Rarity: Adept, Stats: Skill, A, AtSerWarrior
+Code: AtSerWarrior, Rarity: Expert, Stats: Skill, A, AtSerWarrior
+Code: AtSerWarrior, Rarity: Master, Stats: Skill, A, AtSerWarrior
+Code: AtSerSorceress, Rarity: Novice, Stats: Skill, A, AtSerSorceress
+Code: AtSerSorceress, Rarity: Adept, Stats: Skill, A, AtSerSorceress
+Code: AtSerSorceress, Rarity: Expert, Stats: Skill, A, AtSerSorceress
+Code: AtSerSorceress, Rarity: Master, Stats: Skill, A, AtSerSorceress
+
+Wrath
+Code: DashWra, Rarity: Novice, Stats: Skill, NA, D, Dash, DashWra
+Code: DashWra, Rarity: Adept, Stats: Skill, NA, D, Dash, DashWra
+Code: DashWra, Rarity: Expert, Stats: Skill, NA, D, Dash, DashWra
+Code: DashWra, Rarity: Master, Stats: Skill, NA, D, Dash, DashWra
+Code: DashWraRanged, Rarity: Novice, Stats: Skill, NA, D, Dash, DashWraRanged
+Code: DashWraRanged, Rarity: Adept, Stats: Skill, NA, D, Dash, DashWraRanged
+Code: DashWraRanged, Rarity: Expert, Stats: Skill, NA, D, Dash, DashWraRanged
+Code: DashWraRanged, Rarity: Master, Stats: Skill, NA, D, Dash, DashWraRanged
+Code: BoonSpeed, Rarity: Novice, Stats: Skill, NA, P, Passive, Self, BoonSpeed
+Code: BoonSpeed, Rarity: Adept, Stats: Skill, NA, P, Passive, Self, BoonSpeed
+Code: BoonSpeed, Rarity: Expert, Stats: Skill, NA, P, Passive, Self, BoonSpeed
+Code: BoonSpeed, Rarity: Master, Stats: Skill, NA, P, Passive, Self, BoonSpeed
+Code: Movement, Rarity: Novice, Stats: Skill, NA, P, Passive, Self, Movement
+Code: Movement, Rarity: Adept, Stats: Skill, NA, P, Passive, Self, Movement
+Code: Movement, Rarity: Expert, Stats: Skill, NA, P, Passive, Self, Movement
+Code: Movement, Rarity: Master, Stats: Skill, NA, P, Passive, Self, Movement
+Code: LightningBolt, Rarity: Novice, Stats: Skill, NA, P, Autocast, LightningBolt
+Code: LightningBolt, Rarity: Adept, Stats: Skill, NA, P, Autocast, LightningBolt
+Code: LightningBolt, Rarity: Expert, Stats: Skill, NA, P, Autocast, LightningBolt
+Code: LightningBolt, Rarity: Master, Stats: Skill, NA, P, Autocast, LightningBolt
+Code: ChainLightning, Rarity: Novice, Stats: Skill, NA, P, Autocast, ChainLightning
+Code: ChainLightning, Rarity: Adept, Stats: Skill, NA, P, Autocast, ChainLightning
+Code: ChainLightning, Rarity: Expert, Stats: Skill, NA, P, Autocast, ChainLightning
+Code: ChainLightning, Rarity: Master, Stats: Skill, NA, P, Autocast, ChainLightning
+Code: LightningOrbs, Rarity: Novice, Stats: Skill, NA, P, Autocast, LightningOrbs
+Code: LightningOrbs, Rarity: Adept, Stats: Skill, NA, P, Autocast, LightningOrbs
+Code: LightningOrbs, Rarity: Expert, Stats: Skill, NA, P, Autocast, LightningOrbs
+Code: LightningOrbs, Rarity: Master, Stats: Skill, NA, P, Autocast, LightningOrbs
+Code: AtWraAssassin, Rarity: Novice, Stats: Skill, A, AtWraAssassin
+Code: AtWraAssassin, Rarity: Adept, Stats: Skill, A, AtWraAssassin
+Code: AtWraAssassin, Rarity: Expert, Stats: Skill, A, AtWraAssassin
+Code: AtWraAssassin, Rarity: Master, Stats: Skill, A, AtWraAssassin
+Code: AtWraBarbarian, Rarity: Novice, Stats: Skill, A, AtWraBarbarian
+Code: AtWraBarbarian, Rarity: Adept, Stats: Skill, A, AtWraBarbarian
+Code: AtWraBarbarian, Rarity: Expert, Stats: Skill, A, AtWraBarbarian
+Code: AtWraBarbarian, Rarity: Master, Stats: Skill, A, AtWraBarbarian
+Code: AtWraKnight, Rarity: Novice, Stats: Skill, A, AtWraKnight
+Code: AtWraKnight, Rarity: Adept, Stats: Skill, A, AtWraKnight
+Code: AtWraKnight, Rarity: Expert, Stats: Skill, A, AtWraKnight
+Code: AtWraKnight, Rarity: Master, Stats: Skill, A, AtWraKnight
+Code: AtWraWarrior, Rarity: Novice, Stats: Skill, A, AtWraWarrior
+Code: AtWraWarrior, Rarity: Adept, Stats: Skill, A, AtWraWarrior
+Code: AtWraWarrior, Rarity: Expert, Stats: Skill, A, AtWraWarrior
+Code: AtWraWarrior, Rarity: Master, Stats: Skill, A, AtWraWarrior
+Code: AtWraSorceress, Rarity: Novice, Stats: Skill, A, AtWraSorceress
+Code: AtWraSorceress, Rarity: Adept, Stats: Skill, A, AtWraSorceress
+Code: AtWraSorceress, Rarity: Expert, Stats: Skill, A, AtWraSorceress
+Code: AtWraSorceress, Rarity: Master, Stats: Skill, A, AtWraSorceress
+
+Justice
+Code: DashJus, Rarity: Novice, Stats: Skill, NA, D, Dash, DashJus
+Code: DashJus, Rarity: Adept, Stats: Skill, NA, D, Dash, DashJus
+Code: DashJus, Rarity: Expert, Stats: Skill, NA, D, Dash, DashJus
+Code: DashJus, Rarity: Master, Stats: Skill, NA, D, Dash, DashJus
+Code: DashJusRanged, Rarity: Novice, Stats: Skill, NA, D, Dash, DashJusRanged
+Code: DashJusRanged, Rarity: Adept, Stats: Skill, NA, D, Dash, DashJusRanged
+Code: DashJusRanged, Rarity: Expert, Stats: Skill, NA, D, Dash, DashJusRanged
+Code: DashJusRanged, Rarity: Master, Stats: Skill, NA, D, Dash, DashJusRanged
+Code: BoonArmor, Rarity: Novice, Stats: Skill, NA, P, Passive, Self, BoonArmor
+Code: BoonArmor, Rarity: Adept, Stats: Skill, NA, P, Passive, Self, BoonArmor
+Code: BoonArmor, Rarity: Expert, Stats: Skill, NA, P, Passive, Self, BoonArmor
+Code: BoonArmor, Rarity: Master, Stats: Skill, NA, P, Passive, Self, BoonArmor
+Code: RarityUpBoons, Rarity: Legend, Stats: Skill, NA, P, Autocast, RarityUpBoons
+Code: DayOfJudgment, Rarity: Legend, Stats: Skill, NA, P, Autocast, DayOfJudgment
+Code: LifeRegen, Rarity: Novice, Stats: Skill, NA, P, Passive, Self, LifeRegen
+Code: LifeRegen, Rarity: Adept, Stats: Skill, NA, P, Passive, Self, LifeRegen
+Code: LifeRegen, Rarity: Expert, Stats: Skill, NA, P, Passive, Self, LifeRegen
+Code: LifeRegen, Rarity: Master, Stats: Skill, NA, P, Passive, Self, LifeRegen
+Code: HealsMultiplier, Rarity: Novice, Stats: Skill, NA, P, Passive, Self, HealsMultiplier
+Code: HealsMultiplier, Rarity: Adept, Stats: Skill, NA, P, Passive, Self, HealsMultiplier
+Code: HealsMultiplier, Rarity: Expert, Stats: Skill, NA, P, Passive, Self, HealsMultiplier
+Code: HealsMultiplier, Rarity: Master, Stats: Skill, NA, P, Passive, Self, HealsMultiplier
+Code: DivineShield, Rarity: Novice, Stats: Skill, NA, P, Autocast, DivineShield
+Code: DivineShield, Rarity: Adept, Stats: Skill, NA, P, Autocast, DivineShield
+Code: DivineShield, Rarity: Expert, Stats: Skill, NA, P, Autocast, DivineShield
+Code: DivineShield, Rarity: Master, Stats: Skill, NA, P, Autocast, DivineShield
+Code: SmiteReact, Rarity: Novice, Stats: Skill, NA, P, Autocast, SmiteReact
+Code: SmiteReact, Rarity: Adept, Stats: Skill, NA, P, Autocast, SmiteReact
+Code: SmiteReact, Rarity: Expert, Stats: Skill, NA, P, Autocast, SmiteReact
+Code: SmiteReact, Rarity: Master, Stats: Skill, NA, P, Autocast, SmiteReact
+Code: HealReturnDmg, Rarity: Novice, Stats: Skill, NA, P, Autocast, HealReturnDmg
+Code: HealReturnDmg, Rarity: Adept, Stats: Skill, NA, P, Autocast, HealReturnDmg
+Code: HealReturnDmg, Rarity: Expert, Stats: Skill, NA, P, Autocast, HealReturnDmg
+Code: HealReturnDmg, Rarity: Master, Stats: Skill, NA, P, Autocast, HealReturnDmg
+Code: AtJusAssassin, Rarity: Novice, Stats: Skill, A, AtJusAssassin
+Code: AtJusAssassin, Rarity: Adept, Stats: Skill, A, AtJusAssassin
+Code: AtJusAssassin, Rarity: Expert, Stats: Skill, A, AtJusAssassin
+Code: AtJusAssassin, Rarity: Master, Stats: Skill, A, AtJusAssassin
+Code: AtJusBarbarian, Rarity: Novice, Stats: Skill, A, AtJusBarbarian
+Code: AtJusBarbarian, Rarity: Adept, Stats: Skill, A, AtJusBarbarian
+Code: AtJusBarbarian, Rarity: Expert, Stats: Skill, A, AtJusBarbarian
+Code: AtJusBarbarian, Rarity: Master, Stats: Skill, A, AtJusBarbarian
+Code: AtJusKnight, Rarity: Novice, Stats: Skill, A, AtJusKnight
+Code: AtJusKnight, Rarity: Adept, Stats: Skill, A, AtJusKnight
+Code: AtJusKnight, Rarity: Expert, Stats: Skill, A, AtJusKnight
+Code: AtJusKnight, Rarity: Master, Stats: Skill, A, AtJusKnight
+Code: AtJusWarrior, Rarity: Novice, Stats: Skill, A, AtJusWarrior
+Code: AtJusWarrior, Rarity: Adept, Stats: Skill, A, AtJusWarrior
+Code: AtJusWarrior, Rarity: Expert, Stats: Skill, A, AtJusWarrior
+Code: AtJusWarrior, Rarity: Master, Stats: Skill, A, AtJusWarrior
+Code: AtJusSorceress, Rarity: Novice, Stats: Skill, A, AtJusSorceress
+Code: AtJusSorceress, Rarity: Adept, Stats: Skill, A, AtJusSorceress
+Code: AtJusSorceress, Rarity: Expert, Stats: Skill, A, AtJusSorceress
+Code: AtJusSorceress, Rarity: Master, Stats: Skill, A, AtJusSorceress
+
+Time
+Code: DashTim, Rarity: Novice, Stats: Skill, NA, D, Dash, DashTim
+Code: DashTim, Rarity: Adept, Stats: Skill, NA, D, Dash, DashTim
+Code: DashTim, Rarity: Expert, Stats: Skill, NA, D, Dash, DashTim
+Code: DashTim, Rarity: Master, Stats: Skill, NA, D, Dash, DashTim
+Code: DashTimRanged, Rarity: Novice, Stats: Skill, NA, D, Dash, DashTimRanged
+Code: DashTimRanged, Rarity: Adept, Stats: Skill, NA, D, Dash, DashTimRanged
+Code: DashTimRanged, Rarity: Expert, Stats: Skill, NA, D, Dash, DashTimRanged
+Code: DashTimRanged, Rarity: Master, Stats: Skill, NA, D, Dash, DashTimRanged
+Code: BoonDuration, Rarity: Novice, Stats: Skill, NA, P, Passive, Self, BoonDuration
+Code: BoonDuration, Rarity: Adept, Stats: Skill, NA, P, Passive, Self, BoonDuration
+Code: BoonDuration, Rarity: Expert, Stats: Skill, NA, P, Passive, Self, BoonDuration
+Code: BoonDuration, Rarity: Master, Stats: Skill, NA, P, Passive, Self, BoonDuration
+Code: TimeRewind, Rarity: Legend, Stats: Skill, NA, P, Passive, Self, TimeRewind
+Code: TheTasteOfTime, Rarity: Legend, Stats: Skill, NA, P, Passive, Aura, TheTasteOfTime
+Code: GemHigh, Rarity: Novice, Stats: Skill, NA, P, Passive, Self, GemHigh
+Code: GemHigh, Rarity: Adept, Stats: Skill, NA, P, Passive, Self, GemHigh
+Code: GemHigh, Rarity: Expert, Stats: Skill, NA, P, Passive, Self, GemHigh
+Code: GemHigh, Rarity: Master, Stats: Skill, NA, P, Passive, Self, GemHigh
+Code: SummonDmg, Rarity: Novice, Stats: Skill, NA, P, Passive, Self, SummonDmg
+Code: SummonDmg, Rarity: Adept, Stats: Skill, NA, P, Passive, Self, SummonDmg
+Code: SummonDmg, Rarity: Expert, Stats: Skill, NA, P, Passive, Self, SummonDmg
+Code: SummonDmg, Rarity: Master, Stats: Skill, NA, P, Passive, Self, SummonDmg
+Code: Force, Rarity: Novice, Stats: Skill, NA, P, Passive, Self, Force
+Code: Force, Rarity: Adept, Stats: Skill, NA, P, Passive, Self, Force
+Code: Force, Rarity: Expert, Stats: Skill, NA, P, Passive, Self, Force
+Code: Force, Rarity: Master, Stats: Skill, NA, P, Passive, Self, Force
+Code: ExperienceGain, Rarity: Novice, Stats: Skill, NA, P, Passive, Self, ExperienceGain
+Code: ExperienceGain, Rarity: Adept, Stats: Skill, NA, P, Passive, Self, ExperienceGain
+Code: ExperienceGain, Rarity: Expert, Stats: Skill, NA, P, Passive, Self, ExperienceGain
+Code: ExperienceGain, Rarity: Master, Stats: Skill, NA, P, Passive, Self, ExperienceGain
+Code: TimeField, Rarity: Novice, Stats: Skill, NA, P, Autocast, TimeField
+Code: TimeField, Rarity: Adept, Stats: Skill, NA, P, Autocast, TimeField
+Code: TimeField, Rarity: Expert, Stats: Skill, NA, P, Autocast, TimeField
+Code: TimeField, Rarity: Master, Stats: Skill, NA, P, Autocast, TimeField
+Code: ShrineBoon, Rarity: Novice, Stats: Skill, NA, P, Passive, Self, ShrineBoon
+Code: ShrineBoon, Rarity: Adept, Stats: Skill, NA, P, Passive, Self, ShrineBoon
+Code: ShrineBoon, Rarity: Expert, Stats: Skill, NA, P, Passive, Self, ShrineBoon
+Code: ShrineBoon, Rarity: Master, Stats: Skill, NA, P, Passive, Self, ShrineBoon
+Code: AtTimAssassin, Rarity: Novice, Stats: Skill, A, AtTimAssassin
+Code: AtTimAssassin, Rarity: Adept, Stats: Skill, A, AtTimAssassin
+Code: AtTimAssassin, Rarity: Expert, Stats: Skill, A, AtTimAssassin
+Code: AtTimAssassin, Rarity: Master, Stats: Skill, A, AtTimAssassin
+Code: AtTimBarbarian, Rarity: Novice, Stats: Skill, A, AtTimBarbarian
+Code: AtTimBarbarian, Rarity: Adept, Stats: Skill, A, AtTimBarbarian
+Code: AtTimBarbarian, Rarity: Expert, Stats: Skill, A, AtTimBarbarian
+Code: AtTimBarbarian, Rarity: Master, Stats: Skill, A, AtTimBarbarian
+Code: AtTimKnight, Rarity: Novice, Stats: Skill, A, AtTimKnight
+Code: AtTimKnight, Rarity: Adept, Stats: Skill, A, AtTimKnight
+Code: AtTimKnight, Rarity: Expert, Stats: Skill, A, AtTimKnight
+Code: AtTimKnight, Rarity: Master, Stats: Skill, A, AtTimKnight
+Code: AtTimWarrior, Rarity: Novice, Stats: Skill, A, AtTimWarrior
+Code: AtTimWarrior, Rarity: Adept, Stats: Skill, A, AtTimWarrior
+Code: AtTimWarrior, Rarity: Expert, Stats: Skill, A, AtTimWarrior
+Code: AtTimWarrior, Rarity: Master, Stats: Skill, A, AtTimWarrior
+Code: AtTimSorceress, Rarity: Novice, Stats: Skill, A, AtTimSorceress
+Code: AtTimSorceress, Rarity: Adept, Stats: Skill, A, AtTimSorceress
+Code: AtTimSorceress, Rarity: Expert, Stats: Skill, A, AtTimSorceress
+Code: AtTimSorceress, Rarity: Master, Stats: Skill, A, AtTimSorceress
