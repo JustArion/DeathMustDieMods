@@ -6,18 +6,7 @@ using ReflectionHelpers;
 
 public static class DarknessOptionsReflection
 {
-    private static readonly Lazy<Func<DarknessOptions, List<DarknessOptions.Challenge>>> _challenges = new(() =>
-    {
-        var challengesInfo = typeof(DarknessOptions).GetField(nameof(_challenges), BindingFlags.NonPublic | BindingFlags.Instance);
+    private static readonly Lazy<Func<DarknessOptions, List<DarknessOptions.Challenge>>> _challenges = PrivateFieldsHelper.CreateFieldGetterDelegate<DarknessOptions, List<DarknessOptions.Challenge>>(nameof(_challenges));
 
-        if (challengesInfo != null)
-            return challengesInfo.CreateFieldGetter<DarknessOptions, List<DarknessOptions.Challenge>>();
-        
-        
-        Logger.LogError($"Unable to find field {nameof(_challenges)}.");
-        throw new NullReferenceException(nameof(challengesInfo));
-
-    });
-
-    public static List<DarknessOptions.Challenge> Challenges(this DarknessOptions options) => _challenges.Value(options);
+    public static List<DarknessOptions.Challenge> Challenges(this DarknessOptions challenge) => _challenges.Value(challenge);
 }

@@ -1,9 +1,7 @@
 ﻿namespace Dawn.DMD.StarCruxExpansion.UI;
 
 using System.Collections.Generic;
-using Claw.UserInterface.Selection;
 using Cysharp.Threading.Tasks;
-using Death.Darkness;
 using Death.TimesRealm.UserInterface.Darkness;
 using Harmony;
 using Helpers;
@@ -34,10 +32,14 @@ public class ModdedRealmManager : MonoBehaviour
         _realmNameCarousel = realmNamePanel.gameObject.AddComponent<GUI_RealmNameCarousel>();
 
         #if DEBUG
-        _realmNameCarousel.EnableDebugMode();
+        // _realmNameCarousel.EnableDebugMode();
         #endif
 
         _realmNameCarousel.SubscribeToDefaultRealm(ReturnToOuterCircle);
+
+        _affordanceHandler = _realmNameCarousel.NextRealmButton.AddComponent<AffordanceHandler>();
+        _affordanceHandler.SetData("x_ModdedRealm", out var callback);
+        _realmNameCarousel.NextRealmButton.onClick.AddListener(callback.Invoke);
         
         foreach (var realm in _moddedRealms) 
             _realmNameCarousel.AddRealmName(realm.RealmName, OnRealmNavigate);

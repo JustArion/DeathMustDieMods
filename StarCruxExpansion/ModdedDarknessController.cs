@@ -2,8 +2,6 @@
 
 using System.Collections.Generic;
 using Death.Darkness;
-using Death.Data.Tables;
-using Death.Unlockables;
 using Harmony;
 
 public class ModdedDarknessController(DarknessOptions options, IEnumerable<ChallengeData> challengeData) : IDarknessController

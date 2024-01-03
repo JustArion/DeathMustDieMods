@@ -13,7 +13,7 @@ public class RealmData(string realmName, IEnumerable<ChallengeDataInformation> c
     public IEnumerable<ChallengeDataInformation> ChallengesInformation => challenges;
     public IEnumerable<ChallengeData> Challenges => challenges.Select(x => x.ChallengeData);
 
-    public IEnumerable<ChallengeDataTextInformation> ChallengeDataInformation => challenges.Select(x => x.TextInformation);
+    public IEnumerable<(string Title, string DescriptionFormat)> ChallengeDataInformation => challenges.Select(x => x.TextInformation);
     
     public IEnumerator<ChallengeData> GetEnumerator() => challenges.Select(x => x.ChallengeData).GetEnumerator();
 

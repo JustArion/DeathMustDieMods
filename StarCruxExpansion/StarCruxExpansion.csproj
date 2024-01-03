@@ -18,11 +18,13 @@
 <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugType>embedded</DebugType>
     <OutputPath>D:\Games\Death Must Die\BepInEx\plugins\</OutputPath>
+    <NoWarn>1701;1702;CS0618</NoWarn>
 </PropertyGroup>
 
 <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <DebugType>embedded</DebugType>
     <OutputPath>D:\Games\Death Must Die\BepInEx\plugins\</OutputPath>
+    <NoWarn>1701;1702;CS0618</NoWarn>
 </PropertyGroup>
 
 <ItemGroup>
@@ -37,6 +39,10 @@
 </ItemGroup>
 
 <ItemGroup>
+    <Reference Include="Claw.Core">
+      <HintPath>D:\Games\Death Must Die\Death Must Die_Data\Managed\Claw.Core.dll</HintPath>
+        <Private>false</Private>
+    </Reference>
     <Reference Include="Death">
         <HintPath>D:\Games\Death Must Die\Death Must Die_Data\Managed\Death.dll</HintPath>
         <Private>false</Private>

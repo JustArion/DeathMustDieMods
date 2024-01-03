@@ -78,7 +78,36 @@ internal static class PrivateFieldsHelper
             return new Lazy<Func<TInstance, TReturnType>>(() => fieldInfo.CreateFieldGetter<TInstance, TReturnType>());
         
         
-        Logger.LogError($"Unable to find field {fieldName}.");
+        Logger.LogError($"Unable to find field typeof({typeof(TInstance).Name}).{fieldName}");
+        throw new NullReferenceException(nameof(fieldInfo));
+    }
+    
+    public static Lazy<Action<TInstance, TReturnType>> CreateFieldSetterDelegate<TInstance, TReturnType>(string fieldName) where TInstance : class
+    {
+        var fieldInfo = typeof(TInstance).GetField(fieldName, BindingFlags.NonPublic | BindingFlags.Instance);
+
+        if (fieldInfo != null)
+            return new Lazy<Action<TInstance, TReturnType>>(() => fieldInfo.CreateFieldSetter<TInstance, TReturnType>());
+        
+        
+        Logger.LogError($"Unable to find field typeof({typeof(TInstance).Name}).{fieldName}");
+        throw new NullReferenceException(nameof(fieldInfo));
+    }
+    
+    
+    internal static Func<TParameter> CreateStaticFieldGetter<TParameter>(this FieldInfo field, Type containingClass) 
+        => (Func<TParameter>) _CreateFieldGetterDelegate(containingClass, typeof(TParameter), field);
+    
+
+    public static Lazy<Func<TReturnType>> CreateStaticFieldGetterDelegate<TReturnType>(Type containingClass, string fieldName)
+    {
+        var fieldInfo = containingClass.GetField(fieldName, BindingFlags.NonPublic | BindingFlags.Static);
+
+        if (fieldInfo != null)
+            return new Lazy<Func<TReturnType>>(() => fieldInfo.CreateStaticFieldGetter<TReturnType>(containingClass));
+        
+        
+        Logger.LogError($"Unable to find field typeof({containingClass.Name}).{fieldName}");
         throw new NullReferenceException(nameof(fieldInfo));
     }
 }
