@@ -21,7 +21,7 @@ public class AddMoreStashTabs_Patch
             return true;
         
         defaultPageCount = 5;
-        Logger.LogDebug("Stash tabs is now 5 from 3");
+        Logger.LogDebug("Your Stash tabs are now 5 from 3");
         return true;
     }
 
