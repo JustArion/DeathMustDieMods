@@ -7,7 +7,11 @@ Done:
 
 To Do:
 - Add custom modded challenges
-- Add own page in the Star Crux for modded challenges
+  - Sync modded points pages with vanilla points
+  - Save modded realms' points on page navigate
+  - Implement an affordance to notify the user that there are modded realms
+- ~~Add own page in the Star Crux for modded challenges~~
+- Have the challenges appear properly in-game
 
 
 Alterations:
