@@ -1,7 +1,5 @@
 ﻿namespace Dawn.DMD.LongerGames;
 
-using BepInEx.Configuration;
-using Claw.Core;
 using Death.Run.Systems;
 using Death.Run.Systems.Spawning;
 
