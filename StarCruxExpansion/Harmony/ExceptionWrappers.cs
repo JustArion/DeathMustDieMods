@@ -36,7 +36,7 @@ internal static class ExceptionWrappers
         }
         catch (Exception e)
         {
-            Logger.LogError(e);
+            ModLogger.LogError(e);
         }
     }
 }

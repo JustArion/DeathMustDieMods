@@ -25,7 +25,7 @@ public class RaiseItemRarityCeiling_Patch
         }
         catch (Exception e)
         {
-            Logger.LogError(e);
+            ModLogger.LogError(e);
             return true;
         }
     }

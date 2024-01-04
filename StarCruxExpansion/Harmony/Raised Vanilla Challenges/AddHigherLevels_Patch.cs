@@ -34,7 +34,7 @@ public class AddHigherLevels_Patch
         }
         catch (Exception e)
         {
-            Logger.LogError(e);
+            ModLogger.LogError(e);
         }
         
         return true;

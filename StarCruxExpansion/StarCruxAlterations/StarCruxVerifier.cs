@@ -9,7 +9,7 @@ public class StarCruxVerifier
         
         if (!ExpectedChallenges.TryGetValue(Code, out var challenge))
         {
-            Logger.LogDebug($"Unknown / Modded Star Crux Code: '{Code}', Values: [{PointsPerLevel}, {MaxLevel}]");
+            ModLogger.LogDebug($"Unknown / Modded Star Crux Code: '{Code}', Values: [{PointsPerLevel}, {MaxLevel}]");
             return false;
         }
 
@@ -18,7 +18,7 @@ public class StarCruxVerifier
 
         if (!retVal)
         {
-            Logger.LogWarning($"""
+            ModLogger.LogWarning($"""
                                Unexpected Star Crux Values for '{Code}'.
                                Expected [Max: {challenge.MaxLevel}, PPL: {challenge.PointsPerLevel}],
                                Got: [Max: {MaxLevel}, PPL: {PointsPerLevel}]

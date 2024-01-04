@@ -8,7 +8,7 @@ internal static class StarCruxModifier
     {
         if (!StarCruxVerifier.ExpectedChallenges.TryGetValue(Code, out _))
         {
-            Logger.LogError($"Unknown / Unexpected challenge code: {Code}");
+            ModLogger.LogError($"Unknown / Unexpected challenge code: {Code}");
             return;
         }
         
@@ -22,7 +22,7 @@ internal static class StarCruxModifier
         
         
         if (priorMaxLevel != MaxLevel || priorPointsPerLevel != PointsPerLevel)
-            Logger.LogDebug($"Star Crux '{Code}' :: [Max Level: {priorMaxLevel}, Points Per Level: {priorPointsPerLevel}] -> [Max Level: {MaxLevel}, Points Per Level: {PointsPerLevel}]");
+            ModLogger.LogDebug($"Star Crux '{Code}' :: [Max Level: {priorMaxLevel}, Points Per Level: {priorPointsPerLevel}] -> [Max Level: {MaxLevel}, Points Per Level: {PointsPerLevel}]");
     }
     
     

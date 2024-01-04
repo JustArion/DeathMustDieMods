@@ -18,12 +18,12 @@ public class InterceptStarCruxData_Patch
             if (darkness is not DarknessController controller)
                 return true;
             VanillaDarknessController = controller;
-            Logger.LogDebug(nameof(VanillaDarknessController));
+            ModLogger.LogDebug(nameof(VanillaDarknessController));
 
         }
         catch (Exception e)
         {
-            Logger.LogError(e);
+            ModLogger.LogError(e);
         }
 
         return true;

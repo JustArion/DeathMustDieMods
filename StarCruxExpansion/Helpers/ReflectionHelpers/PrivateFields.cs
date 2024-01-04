@@ -78,7 +78,7 @@ internal static class PrivateFieldsHelper
             return new Lazy<Func<TInstance, TReturnType>>(() => fieldInfo.CreateFieldGetter<TInstance, TReturnType>());
         
         
-        Logger.LogError($"Unable to find field typeof({typeof(TInstance).Name}).{fieldName}");
+        ModLogger.LogError($"Unable to find field typeof({typeof(TInstance).Name}).{fieldName}");
         throw new NullReferenceException(nameof(fieldInfo));
     }
     
@@ -90,7 +90,7 @@ internal static class PrivateFieldsHelper
             return new Lazy<Action<TInstance, TReturnType>>(() => fieldInfo.CreateFieldSetter<TInstance, TReturnType>());
         
         
-        Logger.LogError($"Unable to find field typeof({typeof(TInstance).Name}).{fieldName}");
+        ModLogger.LogError($"Unable to find field typeof({typeof(TInstance).Name}).{fieldName}");
         throw new NullReferenceException(nameof(fieldInfo));
     }
     
@@ -107,7 +107,7 @@ internal static class PrivateFieldsHelper
             return new Lazy<Func<TReturnType>>(() => fieldInfo.CreateStaticFieldGetter<TReturnType>(containingClass));
         
         
-        Logger.LogError($"Unable to find field typeof({containingClass.Name}).{fieldName}");
+        ModLogger.LogError($"Unable to find field typeof({containingClass.Name}).{fieldName}");
         throw new NullReferenceException(nameof(fieldInfo));
     }
 }

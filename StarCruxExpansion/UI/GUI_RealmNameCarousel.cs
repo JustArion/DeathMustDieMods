@@ -48,7 +48,7 @@ public class GUI_RealmNameCarousel : MonoBehaviour
 
         if (previousIndex == _index)
         {
-            Plugin.Logger.LogDebug("Did not navigate to next realm, since there is none.");
+            ModLogger.LogDebug("Did not navigate to next realm, since there is none.");
             return false; // Did not increment, there's only 1 realm page.
         }
         
@@ -56,10 +56,10 @@ public class GUI_RealmNameCarousel : MonoBehaviour
 
 
         if (_debug) 
-            Plugin.Logger.LogDebug($"On '{nameof(NavigateNextRealm)}' -> Realm Name: {(string.IsNullOrWhiteSpace(realmName) ? "The Outer Circle" : realmName)}");
+            ModLogger.LogDebug($"On '{nameof(NavigateNextRealm)}' -> Realm Name: {(string.IsNullOrWhiteSpace(realmName) ? "The Outer Circle" : realmName)}");
 
         SetText(realmName);
-        navigationCallbacks.ForEach(x => ExceptionWrappers.Wrap(() => x(realmName), Plugin.Logger.LogError));
+        navigationCallbacks.ForEach(x => ExceptionWrappers.Wrap(() => x(realmName), ModLogger.LogError));
         return true;
     }
 
@@ -70,7 +70,7 @@ public class GUI_RealmNameCarousel : MonoBehaviour
 
         if (previousIndex == _index)
         {
-            Plugin.Logger.LogDebug("Did not navigate to previous realm, since there is none.");
+            ModLogger.LogDebug("Did not navigate to previous realm, since there is none.");
             return false; // Did not increment, there's only 1 realm page.
         }
         
@@ -78,10 +78,10 @@ public class GUI_RealmNameCarousel : MonoBehaviour
 
 
         if (_debug)
-            Plugin.Logger.LogDebug($"On '{nameof(NavigatePreviousRealm)}' -> Realm Name: {realmName}");
+            ModLogger.LogDebug($"On '{nameof(NavigatePreviousRealm)}' -> Realm Name: {realmName}");
         
         SetText(realmName);
-        navigationCallbacks.ForEach(x => ExceptionWrappers.Wrap(() => x(realmName), Plugin.Logger.LogError));
+        navigationCallbacks.ForEach(x => ExceptionWrappers.Wrap(() => x(realmName), ModLogger.LogError));
         return true;
     }
 
@@ -99,7 +99,7 @@ public class GUI_RealmNameCarousel : MonoBehaviour
 
         if (defaultRealm == default)
         {
-            Plugin.Logger.LogWarning("Unable to subscribe to default realm, it does not exist.");
+            ModLogger.LogWarning("Unable to subscribe to default realm, it does not exist.");
             return;
         }
         
@@ -111,7 +111,7 @@ public class GUI_RealmNameCarousel : MonoBehaviour
     {
         if (realmName == null || navigationCallback == null)
         {
-            Plugin.Logger.LogWarning("Unable to add Realm Name, either the RealmName is null or the Callback action is.");
+            ModLogger.LogWarning("Unable to add Realm Name, either the RealmName is null or the Callback action is.");
             return;
         }
 
@@ -128,7 +128,7 @@ public class GUI_RealmNameCarousel : MonoBehaviour
     {
         if (realmName == string.Empty)
         {
-            Plugin.Logger.LogWarning("The default realm should not be removed!");
+            ModLogger.LogWarning("The default realm should not be removed!");
             return;
         }
 
@@ -138,10 +138,10 @@ public class GUI_RealmNameCarousel : MonoBehaviour
     public void EnableDebugMode()
     {
         _debug = true;
-        NextRealmButton.onClick.AddListener(() => Plugin.Logger.LogDebug($"{nameof(NextRealmButton)} clicked"));
+        NextRealmButton.onClick.AddListener(() => ModLogger.LogDebug($"{nameof(NextRealmButton)} clicked"));
         NextRealmButton.GetComponent<Image>().color = Color.white;
         
-        PreviousRealmButton.onClick.AddListener(() => Plugin.Logger.LogDebug($"{nameof(PreviousRealmButton)} clicked"));
+        PreviousRealmButton.onClick.AddListener(() => ModLogger.LogDebug($"{nameof(PreviousRealmButton)} clicked"));
         PreviousRealmButton.GetComponent<Image>().color = Color.white;
     }
     

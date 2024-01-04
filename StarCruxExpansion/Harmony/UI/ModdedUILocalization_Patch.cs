@@ -53,7 +53,7 @@ public class ModdedUILocalization_Patch
         var descriptionFormat = moddedChallengeData.TextInformation.DescriptionFormat;
         var challengeDescription = ExceptionWrappers.Wrap(() => 
                 LocalizationSettings.StringDatabase.SmartFormatter.Format(descriptionFormat, stats),
-            descriptionFormat, Logger.LogErrorMessage);
+            descriptionFormat, ModLogger.LogErrorMessage);
 
         __instance.DescriptionText().text = challengeDescription;
         return false;
