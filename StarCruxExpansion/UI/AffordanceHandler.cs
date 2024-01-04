@@ -1,11 +1,8 @@
-﻿namespace Dawn.DMD.StarCruxExpansion.UI;
+﻿// #define ALWAYS_SHOW_AFFORDANCES
+namespace Dawn.DMD.StarCruxExpansion.UI;
 
-using System.Diagnostics;
 using Claw.Core;
-using Claw.Core.Utils;
 using Death.TimesRealm;
-using Death.TimesRealm.Behaviours;
-using Reflection;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,7 +18,7 @@ public class AffordanceHandler : MonoBehaviour
     {
         if (_initialized)
             return;
-        _id = "sce_" + identifier;
+        _id = "SCE_" + identifier;
     
         PrepareIndiactor();
         
@@ -52,8 +49,16 @@ public class AffordanceHandler : MonoBehaviour
         if (show) 
             ModLogger.LogDebug($"{nameof(AffordanceHandler)}::{nameof(ShowAffordance)} Id: {_id} was shown.");
         
+        #if ALWAYS_SHOW_AFFORDANCES
+        _realmAffordance.SetActive(true);
+        #else
         _realmAffordance.SetActive(show);
+        #endif
     }
+    
+    #if ALWAYS_SHOW_AFFORDANCES
+    private bool _dismissed;
+    #endif
 
     public void DismissAffordance()
     {
@@ -67,11 +72,18 @@ public class AffordanceHandler : MonoBehaviour
             return;
 
         _realmAffordance.SetActive(false);
-        #if !DEBUG
-        SingletonBehaviour<Facade_Lobby>.Instance.MarkNewIndicatorSeen(_id);
-        Plugin.Logger.LogDebug($"{nameof(AffordanceHandler)}::{nameof(DismissAffordance)} Id: {_id} was dismissed.");
-        #else
+        #if ALWAYS_SHOW_AFFORDANCES
+        if (_dismissed)
+            return;
+
         ModLogger.LogDebug($"{nameof(AffordanceHandler)}::{nameof(DismissAffordance)} Id: {_id} was \"dismissed\".");
+        _dismissed = true;
+        #else
+        if (!SingletonBehaviour<Facade_Lobby>.Instance.ShouldNewIndicatorAppear(_id)) 
+            return;
+        SingletonBehaviour<Facade_Lobby>.Instance.MarkNewIndicatorSeen(_id);
+        
+        ModLogger.LogDebug($"{nameof(AffordanceHandler)}::{nameof(DismissAffordance)} Id: {_id} was dismissed.");
         #endif
 
     }

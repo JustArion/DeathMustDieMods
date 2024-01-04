@@ -38,7 +38,7 @@ public class ModdedRealmManager : MonoBehaviour
         _realmNameCarousel.SubscribeToDefaultRealm(ReturnToOuterCircle);
 
         _affordanceHandler = _realmNameCarousel.NextRealmButton.AddComponent<AffordanceHandler>();
-        _affordanceHandler.SetData("SCE_Affordance_ModdedRealm");
+        _affordanceHandler.SetData("ModdedRealm_Affordance");
         _realmNameCarousel.NextRealmButton.onClick.AddListener(_affordanceHandler.DismissAffordance);
         
         foreach (var realm in _moddedRealms) 
