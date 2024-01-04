@@ -38,8 +38,8 @@ public class ModdedRealmManager : MonoBehaviour
         _realmNameCarousel.SubscribeToDefaultRealm(ReturnToOuterCircle);
 
         _affordanceHandler = _realmNameCarousel.NextRealmButton.AddComponent<AffordanceHandler>();
-        _affordanceHandler.SetData("x_ModdedRealm", out var callback);
-        _realmNameCarousel.NextRealmButton.onClick.AddListener(callback.Invoke);
+        _affordanceHandler.SetData("SCE_Affordance_ModdedRealm");
+        _realmNameCarousel.NextRealmButton.onClick.AddListener(_affordanceHandler.DismissAffordance);
         
         foreach (var realm in _moddedRealms) 
             _realmNameCarousel.AddRealmName(realm.RealmName, OnRealmNavigate);
@@ -52,7 +52,7 @@ public class ModdedRealmManager : MonoBehaviour
         var realm = _moddedRealms.FirstOrDefault(x => x.RealmName == realmName);
         if (realm == null)
         {
-            Plugin.Logger.LogWarning($"Realm controller not found for realm '{realmName}'");
+            ModLogger.LogWarning($"Realm controller not found for realm '{realmName}'");
             return;
         }
 
@@ -80,13 +80,13 @@ public class ModdedRealmManager : MonoBehaviour
     {
         if (string.IsNullOrWhiteSpace(realmData.RealmName))
         {
-            Plugin.Logger.LogWarning("You can not add a realm with a null or empty name!");
+            ModLogger.LogWarning("You can not add a realm with a null or empty name!");
             return;
         }
 
         if (!realmData.Challenges.Any())
         {
-            Plugin.Logger.LogWarning("You can not add a realm with no challenges!");
+            ModLogger.LogWarning("You can not add a realm with no challenges!");
             return; 
         }
 
@@ -95,15 +95,15 @@ public class ModdedRealmManager : MonoBehaviour
         foreach (var challengeData in realmData.ChallengesInformation) 
             _allModdedChallenges.Add(challengeData);
         
-        Plugin.Logger.LogDebug($"Added realm {realmData.RealmName} with {realmData.Challenges.Count()} challenges");
-        Plugin.Logger.LogDebug($"Total modded realms: {_moddedRealms.Count}");
+        ModLogger.LogDebug($"Added realm {realmData.RealmName} with {realmData.Challenges.Count()} challenges");
+        ModLogger.LogDebug($"Total modded realms: {_moddedRealms.Count}");
     }
 
     public static void RemoveModdedRealm(string realmName)
     {
         if (string.IsNullOrWhiteSpace(realmName))
         {
-            Plugin.Logger.LogWarning("You can not remove the default realm!");
+            ModLogger.LogWarning("You can not remove the default realm!");
             return;
         }
 
@@ -111,7 +111,7 @@ public class ModdedRealmManager : MonoBehaviour
 
         if (realm == null)
         {
-            Plugin.Logger.LogWarning($"Realm '{realmName}' not found!");
+            ModLogger.LogWarning($"Realm '{realmName}' not found!");
             return;
         }
         

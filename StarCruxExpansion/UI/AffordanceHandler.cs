@@ -1,69 +1,80 @@
 ﻿namespace Dawn.DMD.StarCruxExpansion.UI;
 
+using System.Diagnostics;
 using Claw.Core;
+using Claw.Core.Utils;
 using Death.TimesRealm;
 using Death.TimesRealm.Behaviours;
 using Reflection;
 using UnityEngine;
+using UnityEngine.UI;
 
+[RequireComponent(typeof(Button))]
 public class AffordanceHandler : MonoBehaviour
 {
-    private static GameObject _newIndicatorFab;
-
-    private static GameObject _indicatorFab => _newIndicatorFab ??= FindObjectsOfType<GameObject>().FirstOrDefault(x => x.name == "NpcTalk_Fab");
-
-    private GameObject _newIndicator;
+    private GameObject _realmAffordance;
     
     private bool _initialized;
     private string _id;
 
-    public void SetData(string identifier, out Action markSeenCallback)
+    public void SetData(string identifier)
     {
-        markSeenCallback = null;
-        
         if (_initialized)
             return;
         _id = "sce_" + identifier;
-        
-        _newIndicator = Instantiate(_indicatorFab, transform);
-
-        markSeenCallback = DismissAffordance;
+    
+        PrepareIndiactor();
         
         _initialized = true;
         
         ShowAffordance();
     }
-    
+
+    private void PrepareIndiactor()
+    {
+        _realmAffordance = new GameObject("Affordance", typeof(Image), typeof(AffordanceAnimator));
+        var realmTransform = _realmAffordance.transform;
+        
+        realmTransform.SetParent(transform, false);
+        realmTransform.localPosition = new Vector2(30, 45);
+    }
+
     public void ShowAffordance()
     {
         if (!_initialized)
         {
-            Plugin.Logger.LogWarning("Affordance Data has not been set!");
+            ModLogger.LogWarning("Affordance Data has not been set!");
             return;
         }
 
         var show = SingletonBehaviour<Facade_Lobby>.Instance.ShouldNewIndicatorAppear(_id);
 
         if (show) 
-            Plugin.Logger.LogDebug($"{nameof(AffordanceHandler)}::{nameof(ShowAffordance)} Id: {_id} was shown.");
+            ModLogger.LogDebug($"{nameof(AffordanceHandler)}::{nameof(ShowAffordance)} Id: {_id} was shown.");
         
-        _newIndicator.SetActive(show);
+        _realmAffordance.SetActive(show);
     }
 
     public void DismissAffordance()
     {
         if (!_initialized)
         {
-            Plugin.Logger.LogWarning("Affordance Data has not been set!");
+            ModLogger.LogWarning("Affordance Data has not been set!");
             return;
         }
 
         if (!gameObject.activeSelf)
             return;
 
-        // SingletonBehaviour<Facade_Lobby>.Instance.MarkNewIndicatorSeen(_id);
-        _newIndicator.SetActive(false);
-        
+        _realmAffordance.SetActive(false);
+        #if !DEBUG
+        SingletonBehaviour<Facade_Lobby>.Instance.MarkNewIndicatorSeen(_id);
         Plugin.Logger.LogDebug($"{nameof(AffordanceHandler)}::{nameof(DismissAffordance)} Id: {_id} was dismissed.");
+        #else
+        ModLogger.LogDebug($"{nameof(AffordanceHandler)}::{nameof(DismissAffordance)} Id: {_id} was \"dismissed\".");
+        #endif
+
     }
+
+    private void OnDestroy() => Destroy(_realmAffordance);
 }
