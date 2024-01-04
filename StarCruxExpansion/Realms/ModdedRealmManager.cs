@@ -1,4 +1,4 @@
-﻿namespace Dawn.DMD.StarCruxExpansion.UI;
+﻿namespace Dawn.DMD.StarCruxExpansion.Realms.UI;
 
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
@@ -6,6 +6,7 @@ using Death.TimesRealm.UserInterface.Darkness;
 using Harmony;
 using Helpers;
 using Reflection;
+using StarCruxExpansion.UI;
 using UnityEngine;
 
 [RequireComponent(typeof(Screen_Darkness))]

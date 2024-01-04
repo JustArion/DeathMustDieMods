@@ -4,8 +4,9 @@ using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using Death.TimesRealm.UserInterface.Darkness;
 using Helpers;
+using Realms;
+using Realms.UI;
 using Reflection;
-using UI;
 using UnityEngine.Localization.Settings;
 
 [HarmonyPatch(typeof(GUI_DarknessChallenge))]

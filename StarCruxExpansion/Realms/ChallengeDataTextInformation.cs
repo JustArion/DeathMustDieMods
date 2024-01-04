@@ -1,4 +1,4 @@
-﻿namespace Dawn.DMD.StarCruxExpansion;
+﻿namespace Dawn.DMD.StarCruxExpansion.Realms;
 
 public readonly struct ChallengeDataTextInformation(string title, string descriptionFormat)
 {

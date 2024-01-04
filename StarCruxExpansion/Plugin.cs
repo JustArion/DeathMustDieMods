@@ -10,7 +10,8 @@ using Death.Utils.Collections;
 using Harmony;
 using Helpers;
 using JetBrains.Annotations;
-using UI;
+using Realms;
+using Realms.UI;
 
 [BepInPlugin("dawn.dmd.starcruxexpansion", "StarCruxExpansion", "1.0.0")]
 public class Plugin : BaseUnityPlugin

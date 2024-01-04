@@ -4,8 +4,8 @@ using System.Collections.Generic;
 using Death.Darkness;
 using Death.Data;
 using JetBrains.Annotations;
+using Realms.UI;
 using Reflection;
-using UI;
 
 [HarmonyPatch(typeof(DarknessOptions), nameof(DarknessOptions.GetTotalPoints))]
 public class AddModdedChallengesTotalPoints_Patch
