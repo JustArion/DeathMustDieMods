@@ -21,7 +21,7 @@ public class AddMoreStashTabs_Patch
             return true;
         
         defaultPageCount = 5;
-        Logger.LogDebug("Your Stash tabs are now 5 from 3");
+        ModLogger.LogDebug("Your Stash tabs are now 5 from 3");
         return true;
     }
 
@@ -53,11 +53,11 @@ public class AddMoreStashTabs_Patch
             }
             
             SaveStateMimic.SyncOriginal(mimicState, ref __1);
-            Logger.LogDebug("Mimic state synced");
+            ModLogger.LogDebug("Mimic state synced");
         }
         catch (Exception e)
         {
-            Logger.LogError(e);
+            ModLogger.LogError(e);
         }
 
     }

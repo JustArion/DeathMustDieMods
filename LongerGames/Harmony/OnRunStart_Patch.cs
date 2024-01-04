@@ -17,7 +17,7 @@ public class OnRunStart_Patch
         }
         catch (Exception e)
         {
-            Logger.LogError(e);
+            ModLogger.LogError(e);
         }
     }
     

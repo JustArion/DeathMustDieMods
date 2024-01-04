@@ -28,11 +28,11 @@ public class ContinueAfter20Mins_Patch
             var defaultRunDurationInMinutes = rules.RunDurationSeconds / 60;
             rules.SetRunDurationInMinutes(GameLengthMinutesConfig.Value);
             if (Math.Abs(defaultRunDurationInMinutes - rules.GetRunDurationInMinutes()) > EPSILON )
-                Logger.LogDebug($"Run duration changed from '{Math.Round(defaultRunDurationInMinutes, 2)}' minutes to '{Math.Round(rules.GetRunDurationInMinutes(), 2)}' minutes");
+                ModLogger.LogDebug($"Run duration changed from '{Math.Round(defaultRunDurationInMinutes, 2)}' minutes to '{Math.Round(rules.GetRunDurationInMinutes(), 2)}' minutes");
         }
         catch (Exception e)
         {
-            Logger.LogError(e);
+            ModLogger.LogError(e);
         }
     }
 
@@ -52,7 +52,7 @@ public class ContinueAfter20Mins_Patch
                 weakReferencesToRemove.Add(() => Instances.Remove(weakGameRules));
         }
         
-        Logger.LogDebug($"Updated '{updatedInstancesAmount}' GameRules instances");
+        ModLogger.LogDebug($"Updated '{updatedInstancesAmount}' GameRules instances");
         weakReferencesToRemove.ForEach(x => x());
     }
 }

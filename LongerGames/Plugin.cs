@@ -12,7 +12,7 @@ using JetBrains.Annotations;
 public class Plugin : BaseUnityPlugin
 {
     private const uint DEFAULT_MODDED_GAME_LENGTH_MINUTES = 35;
-    public new static ManualLogSource Logger { get; private set; } = null!;
+    public new static ManualLogSource ModLogger { get; private set; } = null!;
     internal static Plugin Instance { get; private set; } = null!;
 
     public static ConfigEntry<uint> GameLengthMinutesConfig = null!;
@@ -20,9 +20,9 @@ public class Plugin : BaseUnityPlugin
     [UsedImplicitly]
     private void Awake()
     {
-        Logger = base.Logger;
+        ModLogger = Logger;
         Instance = this;
-        Logger.LogInfo("The underworld torments you further! Your games are longer.");
+        ModLogger.LogInfo("The underworld torments you further! Your games are longer.");
         GameLengthMinutesConfig = Config.Bind("LongerGames", "GameLengthInMinutes", DEFAULT_MODDED_GAME_LENGTH_MINUTES, "The length of a game run in minutes");
 
         GameLengthMinutesConfig.SettingChanged += (_, _) => ContinueAfter20Mins_Patch.UpdateDurations();

@@ -9,14 +9,14 @@ using JetBrains.Annotations;
 [BepInPlugin("dawn.dmd.moreboons", "MoreBoons", "1.0.0")]
 public class Plugin : BaseUnityPlugin
 {
-    internal new static ManualLogSource Logger { get; private set; }
+    internal new static ManualLogSource ModLogger { get; private set; }
     internal static Plugin Instance { get; private set; }
     [UsedImplicitly]
     private void Awake()
     {
-        Logger = base.Logger;
+        ModLogger = Logger;
         Instance = this;
-        base.Logger.LogInfo("Begging the gods for randomness!");
+        Logger.LogInfo("Begging the gods for randomness!");
         HarmonyLib.Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly());
     }
 }

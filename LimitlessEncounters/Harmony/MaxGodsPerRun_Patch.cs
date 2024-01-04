@@ -23,11 +23,11 @@ public class MaxGodsPerRun_Patch
             const int NEW_GODS_PER_RUN = int.MaxValue;
             rules.GodsPerRun = NEW_GODS_PER_RUN;
             if (defaultGodsPerRun != NEW_GODS_PER_RUN)
-                Logger.LogDebug($"Gods per run changed from [{defaultGodsPerRun}] to [{rules.GodsPerRun}] Gods per run");
+                ModLogger.LogDebug($"Gods per run changed from [{defaultGodsPerRun}] to [{rules.GodsPerRun}] Gods per run");
         }
         catch (Exception e)
         {
-            Logger.LogError(e);
+            ModLogger.LogError(e);
         }
 
     }

@@ -13,7 +13,7 @@ public static class MonsterWaveModifier
         
         var gameLengthMultiplier = (float)gameLength / defaultGameLength;
         
-        Logger.LogDebug($"New run started! The game length multiplier is '{Math.Round(gameLengthMultiplier, 2)}'");
+        ModLogger.LogDebug($"New run started! The game length multiplier is '{Math.Round(gameLengthMultiplier, 2)}'");
 
         for (var index = 0; index < run.Options.WaveData.Count; index++)
         {
@@ -26,7 +26,7 @@ public static class MonsterWaveModifier
 
                 var eventName = GenerateEventName(wave.EndOnMonsterKills, nextWave);
 
-                Logger.LogDebug(
+                ModLogger.LogDebug(
                     $"{eventName} - BeginTime: {Math.Round(priorBeginTime / 60f, 2)} mins -> {Math.Round(newBeginTime / 60f, 2)} mins");
             }
 

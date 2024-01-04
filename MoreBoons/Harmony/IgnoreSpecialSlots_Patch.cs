@@ -60,18 +60,18 @@ public class IgnoreSpecialSlots_Patch2
             var _boonManager = _getBoonManager.Value(__instance);
 
             var approximateMatch = StripClass(__3!.Code);
-            Logger.LogDebug($"Found Special Slot Item '{__3!.Code}'");
+            ModLogger.LogDebug($"Found Special Slot Item '{__3!.Code}'");
 
             if (!_boonManager.Any(x => x.Code.StartsWith(approximateMatch))) 
                 return;
             
-            Logger.LogDebug($"Found Duplicate '{__3.Code}' from approx match {approximateMatch}");
+            ModLogger.LogDebug($"Found Duplicate '{__3.Code}' from approx match {approximateMatch}");
             __result = false;
             __3 = null;
         }
         catch (Exception e)
         {
-            Logger.LogError(e);
+            ModLogger.LogError(e);
         }
 
     }
