@@ -9,7 +9,7 @@ using JetBrains.Annotations;
 [BepInPlugin("dawn.dmd.morestashtabs", "MoreStashTabs", "1.0.0")]
 public class Plugin : BaseUnityPlugin
 {
-    internal new static ManualLogSource ModLogger { get; private set; }
+    internal static ManualLogSource ModLogger { get; private set; }
     internal static Plugin Instance { get; private set; }
     [UsedImplicitly]
     private void Awake()

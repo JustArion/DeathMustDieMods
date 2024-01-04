@@ -12,7 +12,7 @@ using JetBrains.Annotations;
 public class Plugin : BaseUnityPlugin
 {
     private const uint DEFAULT_MODDED_GAME_LENGTH_MINUTES = 35;
-    public new static ManualLogSource ModLogger { get; private set; } = null!;
+    public static ManualLogSource ModLogger { get; private set; } = null!;
     internal static Plugin Instance { get; private set; } = null!;
 
     public static ConfigEntry<uint> GameLengthMinutesConfig = null!;

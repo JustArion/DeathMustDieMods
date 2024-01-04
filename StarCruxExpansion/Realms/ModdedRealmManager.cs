@@ -3,10 +3,10 @@
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using Death.TimesRealm.UserInterface.Darkness;
+using DMD.StarCruxExpansion.UI;
 using Harmony;
 using Helpers;
 using Reflection;
-using StarCruxExpansion.UI;
 using UnityEngine;
 
 [RequireComponent(typeof(Screen_Darkness))]
