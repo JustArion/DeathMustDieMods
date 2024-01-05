@@ -59,7 +59,7 @@ public class ModdedRealmManager : MonoBehaviour
 
         var challengeData = realm.Challenges.ToArray();
 
-        _darknessGui.SetDataAsync(_darknessController = new(challengeData.ToDarknessOptions(), challengeData)).Forget();
+        _darknessGui.SetDataAsync(_darknessController = new(realm._options, challengeData)).Forget();
     }
 
 
@@ -67,6 +67,8 @@ public class ModdedRealmManager : MonoBehaviour
 
     public bool NavigateToPreviousRealm() => _realmNameCarousel.NavigatePreviousRealm();
 
+    // This is a visual fix for re-opening the page and having the carousel going to the same page.
+    private void OnDisable() => _realmNameCarousel.ResetToDefaultRealm();
 
     private void ReturnToOuterCircle()
     {
