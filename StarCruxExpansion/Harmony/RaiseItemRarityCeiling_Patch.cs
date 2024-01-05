@@ -1,7 +1,9 @@
 ﻿namespace Dawn.DMD.StarCruxExpansion.Harmony;
 
+using System.Diagnostics.CodeAnalysis;
 using Death.Darkness;
 using JetBrains.Annotations;
+using Realms.UI;
 
 /// <summary>
 /// Modifies the Star Crux progress bar to display the new modded max value.
@@ -16,11 +18,11 @@ public class RaiseItemRarityCeiling_Patch
     {
         try
         {
-            var raisedCeliningMaxPoints = __instance.GetAllChallenges().Where(__instance.IsUnlocked).Select(x => x.PointsPerLevel * x.MaxLevel).Sum();
-            if (raisedCeliningMaxPoints == default)
-                return true;
-            
-            __result = raisedCeliningMaxPoints;
+            var vanillaMaxPoints = GetVanillaMaxPoints(__instance);
+            var moddedMaxPoints = GetModdedMaxPoints();
+
+
+            __result = vanillaMaxPoints + moddedMaxPoints;
             return false;
         }
         catch (Exception e)
@@ -28,5 +30,22 @@ public class RaiseItemRarityCeiling_Patch
             ModLogger.LogError(e);
             return true;
         }
+    }
+
+    internal static int GetVanillaMaxPoints(IDarknessController controller) => 
+        controller.GetAllChallenges()
+            .Where(controller.IsUnlocked)
+            .Select(x => x.PointsPerLevel * x.MaxLevel)
+            .Sum();
+
+    internal static int GetModdedMaxPoints()
+    {
+        var moddedMaxPoints = ModdedRealmManager._allModdedChallenges.Select(x =>
+        {
+            var challengeData = x.ChallengeData;
+            return challengeData.PointsPerLevel * challengeData.MaxLevel;
+        });
+
+        return moddedMaxPoints.Sum();
     }
 }

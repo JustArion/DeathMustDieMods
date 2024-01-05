@@ -17,6 +17,7 @@ public class ModdedDarknessController(DarknessOptions options, IEnumerable<Chall
 
 
     public virtual bool IsUnlocked(ChallengeData challenge) => true;
+    // For the future maybe, if persistence is implemented
     // public virtual bool IsUnlocked(ChallengeData challenge) => _unlocks.IsUnlocked(challenge);
 
 
@@ -50,7 +51,17 @@ public class ModdedDarknessController(DarknessOptions options, IEnumerable<Chall
     public virtual int MaxPoints { get; } = new Lazy<int>(() => challengeData.Sum(challenge => challenge.MaxLevel)).Value;
     public virtual int TotalPoints => _options.GetTotalPoints();
 
-    int IDarknessController.MaxPoints => MaxPoints + InterceptStarCruxData_Patch.VanillaDarknessController.MaxPoints;
+    int IDarknessController.MaxPoints
+    {
+        get
+        {
+            // MaxPoints + InterceptStarCruxData_Patch.VanillaDarknessController.MaxPoints;
+            var vanillaMaxPoints = RaiseItemRarityCeiling_Patch.GetVanillaMaxPoints(InterceptStarCruxData_Patch.VanillaDarknessController);
+            var moddedMaxPoints = RaiseItemRarityCeiling_Patch.GetModdedMaxPoints();
 
-    int IDarknessController.TotalPoints => TotalPoints + InterceptStarCruxData_Patch.VanillaDarknessController.TotalPoints;
+            return vanillaMaxPoints + moddedMaxPoints;
+        }
+    }
+
+    int IDarknessController.TotalPoints => TotalPoints;
 }

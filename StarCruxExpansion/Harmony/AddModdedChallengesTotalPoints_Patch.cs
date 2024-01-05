@@ -32,18 +32,40 @@ public class AddModdedChallengesTotalPoints_Patch
     private static bool Prefix(DarknessOptions __instance, ref int __result)
     {
         var totalPoints = 0;
-        foreach (var challenge in __instance.Challenges())
+        
+        try
         {
-            // If the Vanilla game has the challenge, let them handle it
-            if (Database.Darkness.TryGet(challenge.Code, out var challengeData))
-                totalPoints += challengeData.PointsPerLevel * challenge.Level;
-            // If the Modded realms has the challenge, let them handle it
-            else if (TryGetModdedChallenge(challenge.Code, out challengeData)) 
-                totalPoints += challengeData.PointsPerLevel * challenge.Level;
+            InterceptStarCruxData_Patch.VanillaDarknessController.Options.Challenges().ForEach(challenge =>
+            {
+                if (Database.Darkness.TryGet(challenge.Code, out var challengeData))
+                    totalPoints += challengeData.PointsPerLevel * challenge.Level;
+            });
+
+            foreach (var moddedRealm in ModdedRealmManager._moddedRealms)
+            {
+                moddedRealm._options.Challenges().ForEach(challenge =>
+                {
+                    if (TryGetModdedChallenge(challenge.Code, out var challengeData))
+                        totalPoints += challengeData.PointsPerLevel * challenge.Level;
+                });
+            }
         }
+        catch (Exception e)
+        {
+            ModLogger.LogError(e);
+            return true;
+        }
+
 
         __result = totalPoints;
         return false;
+    }
+
+    private static bool IsVanillaOptions(DarknessOptions options)
+    {
+        var challenge = options.Challenges().First();
+
+        return Database.Darkness.TryGet(challenge.Code, out _);
     }
 
     private static bool TryGetModdedChallenge(string code, out ChallengeData data)
