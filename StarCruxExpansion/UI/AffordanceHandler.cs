@@ -1,5 +1,4 @@
-﻿// #define ALWAYS_SHOW_AFFORDANCES
-namespace Dawn.DMD.StarCruxExpansion.UI;
+﻿namespace Dawn.DMD.StarCruxExpansion.UI;
 
 using Claw.Core;
 using Death.TimesRealm;
