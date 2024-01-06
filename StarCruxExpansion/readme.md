@@ -25,5 +25,5 @@ Alterations:
 | NoPickUps       |   Instant Kill   | Enemy projectiles are +#% faster.              |          35          |  1 -> 2   |      2 -> 3      |
 | BossesMoreDmg   |   Death Struck   | Bosses have +#% damage.                        |          30          |  2 -> 4   |      2 -> 3      |
 | PlayerNoHeal    | Blackened Skies  | Elites and bosses have +# extra projectiles.   |          2           |  1 -> 4   |        4         |
-| BossesMoreLife  |  Borrowed Time   | Bosses have +#% more life per rank.            |          35          |  3 -> 12  |        2         |
+| BossesMoreLife  |  Borrowed Time   | Bosses have +#% more life per rank.            |          35          |  3 -> 6   |      2 -> 4      |
 

@@ -35,6 +35,6 @@ internal static class StarCruxModifier
         ["NoPickUps"]       = (MaxLevel: 2, PointsPerLevel: 3),
         ["BossesMoreDmg"]   = (MaxLevel: 4, PointsPerLevel: 3),
         ["PlayerNoHeal"]    = (MaxLevel: 4, PointsPerLevel: 4),
-        ["BossesMoreLife"]  = (MaxLevel: 12, PointsPerLevel: 2),
+        ["BossesMoreLife"]  = (MaxLevel: 6, PointsPerLevel: 4),
     };
 }
