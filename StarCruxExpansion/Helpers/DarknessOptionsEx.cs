@@ -6,7 +6,7 @@ using Reflection;
 
 public static class DarknessOptionsEx
 {
-    public static void CopyTo(this DarknessOptions options, DarknessOptions target)
+    public static void MergeTo(this DarknessOptions options, DarknessOptions target)
     {
         var originalChallenges = options.Challenges();
         var targetChallenges = target.Challenges();
@@ -14,7 +14,7 @@ public static class DarknessOptionsEx
         targetChallenges.AddRange(originalChallenges);
     }
     
-    public static void CopyTo(this IEnumerable<ChallengeData> options, DarknessOptions target)
+    public static void MergeTo(this IEnumerable<ChallengeData> options, DarknessOptions target)
     {
         var originalChallenges = options.ToDarknessOptions().Challenges();
         var targetChallenges = target.Challenges();
