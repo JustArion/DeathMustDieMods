@@ -29,10 +29,10 @@ public class MergeVanillaAndModdedStarCruxMods_Patch
     {
         var character = new CharacterSetup(profile.Progression.SelectedCharacterCode, profile.Progression.GetTraitFor(profile.Progression.SelectedCharacterCode));
         var waveData = Database.WaveData;
-        var targetDarkness = profile.Darkness;
+        var targetDarkness = profile.Darkness.Clone();
 
         foreach (var moddedRealm in ModdedRealmManager._moddedRealms)
-            moddedRealm._options.MergeTo(targetDarkness);
+            moddedRealm.options.MergeTo(targetDarkness);
         
         
         return new RunOptions(character, waveData, targetDarkness); 

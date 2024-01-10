@@ -59,7 +59,7 @@ public class ModdedRealmManager : MonoBehaviour
 
         var challengeData = realm.Challenges.ToArray();
 
-        _darknessGui.SetDataAsync(_darknessController = new(realm._options, challengeData)).Forget();
+        _darknessGui.SetDataAsync(_darknessController = new(realm.options, challengeData)).Forget();
     }
 
 

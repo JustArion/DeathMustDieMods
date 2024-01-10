@@ -1,8 +1,8 @@
 ﻿namespace Dawn.DMD.StarCruxExpansion.Harmony;
 
-using System.Collections.Generic;
 using Death.Darkness;
 using Death.Data;
+using Helpers;
 using JetBrains.Annotations;
 using Realms.UI;
 using Reflection;
@@ -35,7 +35,8 @@ public class AddModdedChallengesTotalPoints_Patch
         
         try
         {
-            InterceptStarCruxData_Patch.VanillaDarknessController.Options.Challenges().ForEach(challenge =>
+            var vanillaOptions = InterceptStarCruxData_Patch.VanillaDarknessController?.Options ?? __instance;
+            vanillaOptions.Challenges().ForEach(challenge =>
             {
                 if (Database.Darkness.TryGet(challenge.Code, out var challengeData))
                     totalPoints += challengeData.PointsPerLevel * challenge.Level;
@@ -43,9 +44,9 @@ public class AddModdedChallengesTotalPoints_Patch
 
             foreach (var moddedRealm in ModdedRealmManager._moddedRealms)
             {
-                moddedRealm._options.Challenges().ForEach(challenge =>
+                moddedRealm.options.Challenges().ForEach(challenge =>
                 {
-                    if (TryGetModdedChallenge(challenge.Code, out var challengeData))
+                    if (ModdedRealmHelper.TryGetModdedChallenge(challenge.Code, out var challengeData))
                         totalPoints += challengeData.PointsPerLevel * challenge.Level;
                 });
             }
@@ -60,22 +61,4 @@ public class AddModdedChallengesTotalPoints_Patch
         __result = totalPoints;
         return false;
     }
-
-    private static bool IsVanillaOptions(DarknessOptions options)
-    {
-        var challenge = options.Challenges().First();
-
-        return Database.Darkness.TryGet(challenge.Code, out _);
-    }
-
-    private static bool TryGetModdedChallenge(string code, out ChallengeData data)
-    {
-        var challenges = GetAllModdedChallenges();
-
-        data = challenges.FirstOrDefault(x => x.Code == code);
-
-        return data != null;
-    }
-
-    private static IEnumerable<ChallengeData> GetAllModdedChallenges() => ModdedRealmManager._allModdedChallenges.Select(x => x.ChallengeData);
 }

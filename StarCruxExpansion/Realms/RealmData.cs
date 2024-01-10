@@ -2,20 +2,25 @@
 
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using Death.Darkness;
 using Helpers;
 
-public class RealmData(string realmName, IEnumerable<ChallengeDataInformation> challenges) : IEnumerable<ChallengeData>
+[SuppressMessage("ReSharper", "ParameterTypeCanBeEnumerable.Local")]
+[SuppressMessage("ReSharper", "ReturnTypeCanBeEnumerable.Global")]
+public class RealmData(string realmName, ChallengeDataInformation[] challenges) : IReadOnlyCollection<ChallengeData>
 {
-    internal readonly DarknessOptions _options = challenges.Select(x => x.ChallengeData).ToDarknessOptions();
+    internal readonly DarknessOptions options = challenges.Select(x => x.ChallengeData).ToDarknessOptions();
     public string RealmName { get; } = realmName;
 
-    public IEnumerable<ChallengeDataInformation> ChallengesInformation => challenges;
-    public IEnumerable<ChallengeData> Challenges => challenges.Select(x => x.ChallengeData);
+    public ChallengeDataInformation[] ChallengesInformation => challenges;
+    public IEnumerable<ChallengeData> Challenges { get; } = challenges.Select(x => x.ChallengeData);
 
-    public IEnumerable<(string Title, string DescriptionFormat)> ChallengeDataInformation => challenges.Select(x => x.TextInformation);
+    public IEnumerable<(string Title, string DescriptionFormat)> ChallengeDataInformation { get; } = challenges.Select(x => x.TextInformation);
     
-    public IEnumerator<ChallengeData> GetEnumerator() => challenges.Select(x => x.ChallengeData).GetEnumerator();
+    public IEnumerator<ChallengeData> GetEnumerator() => Challenges.GetEnumerator();
 
     IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+
+    public int Count => challenges.Length;
 }
