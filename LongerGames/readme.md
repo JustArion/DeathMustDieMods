@@ -1,5 +1,5 @@
 ﻿### Obsolete Warning
-The mod has been merged into [Star Crux Expansion](../StarCruxExpansion/readme.md)
+The mod has been merged into [Star Crux Expansion](../StarCruxExpansion/readme.md) and won't be receiving updates.
 
 ### Description
 The mod extends the duration of a game run to 35 minutes instead of the usual 20 minutes.
