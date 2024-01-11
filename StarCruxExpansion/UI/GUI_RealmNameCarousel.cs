@@ -10,7 +10,7 @@ public class GUI_RealmNameCarousel : MonoBehaviour
 {
     private static readonly Vector3 HalfScale = new(0.5f, 0.5f, 0.5f);
     private LocalizeStringEvent _Text_Name;
-    private readonly List<(string RealmName, List<Action<string>> NavigationCallbacks)> RealmNames = [];
+    private List<(string RealmName, List<Action<string>> NavigationCallbacks)> RealmNames = [];
     private int _index;
     private bool _debug;
     public Button NextRealmButton;
@@ -56,7 +56,7 @@ public class GUI_RealmNameCarousel : MonoBehaviour
 
 
         if (_debug) 
-            ModLogger.LogDebug($"On '{nameof(NavigateNextRealm)}' -> Realm Name: {(string.IsNullOrWhiteSpace(realmName) ? "The Outer Circle" : realmName)}");
+            ModLogger.LogDebug($"On{nameof(NavigateNextRealm)} -> Realm Name: {(string.IsNullOrWhiteSpace(realmName) ? "The Outer Circle" : realmName)}, IndexLog: [{previousIndex}->{_index}]");
 
         SetText(realmName);
         navigationCallbacks.ForEach(x => ExceptionWrappers.Wrap(() => x(realmName), ModLogger.LogError));
@@ -77,8 +77,8 @@ public class GUI_RealmNameCarousel : MonoBehaviour
         var (realmName, navigationCallbacks) = RealmNames[_index];
 
 
-        if (_debug)
-            ModLogger.LogDebug($"On '{nameof(NavigatePreviousRealm)}' -> Realm Name: {realmName}");
+        if (_debug) 
+            ModLogger.LogDebug($"On{nameof(NavigatePreviousRealm)} -> Realm Name: {(string.IsNullOrWhiteSpace(realmName) ? "The Outer Circle" : realmName)}, IndexLog: [{previousIndex}->{_index}]");
         
         SetText(realmName);
         navigationCallbacks.ForEach(x => ExceptionWrappers.Wrap(() => x(realmName), ModLogger.LogError));
@@ -120,7 +120,12 @@ public class GUI_RealmNameCarousel : MonoBehaviour
         if (priorRegistration != default) 
             priorRegistration.NavigationCallbacks.Add(navigationCallback);
         else
+        {
             RealmNames.Add((realmName, [ navigationCallback ]));
+            // string.Empty should always be at index 0 with this.
+            RealmNames = RealmNames.OrderBy(x => x.RealmName).ToList();
+            ResetToDefaultRealm();
+        }
         
     }
 
@@ -169,5 +174,5 @@ public class GUI_RealmNameCarousel : MonoBehaviour
     }
 
     private void IncrementIndex() => _index = (_index + 1) % RealmNames.Count;
-    private void DecrementIndex() => _index = (_index > 0) ? _index - 1 : RealmNames.Count - 1;
+    private void DecrementIndex() => _index = _index > 0 ? _index - 1 : RealmNames.Count - 1;
 }

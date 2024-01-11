@@ -32,7 +32,9 @@ public class MergeVanillaAndModdedStarCruxMods_Patch
         var targetDarkness = profile.Darkness.Clone();
 
         foreach (var moddedRealm in ModdedRealmManager._moddedRealms)
+        {
             moddedRealm.options.MergeTo(targetDarkness);
+        }
         
         
         return new RunOptions(character, waveData, targetDarkness); 

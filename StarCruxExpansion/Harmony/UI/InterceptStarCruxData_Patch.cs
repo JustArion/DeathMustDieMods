@@ -11,21 +11,17 @@ public class InterceptStarCruxData_Patch
     public static DarknessController VanillaDarknessController { get; private set; }
 
     [UsedImplicitly]
-    private static bool Prefix(IDarknessController darkness)
+    private static void Prefix(IDarknessController darkness)
     {
         try
         {
             if (darkness is not DarknessController controller)
-                return true;
+                return;
             VanillaDarknessController = controller;
-            ModLogger.LogDebug(nameof(VanillaDarknessController));
-
         }
         catch (Exception e)
         {
             ModLogger.LogError(e);
         }
-
-        return true;
     }
 }

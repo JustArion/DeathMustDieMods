@@ -1,6 +1,5 @@
 ﻿namespace Dawn.DMD.StarCruxExpansion.Harmony;
 
-using System.Diagnostics.CodeAnalysis;
 using Death.Darkness;
 using JetBrains.Annotations;
 using Realms.UI;

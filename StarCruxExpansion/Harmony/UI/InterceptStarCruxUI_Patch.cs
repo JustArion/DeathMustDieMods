@@ -11,7 +11,6 @@ public class InterceptStarCruxUI_Patch
     [UsedImplicitly]
     private static void Postfix(Screen_Darkness __instance)
     {
-        ModLogger.LogDebug(nameof(OnDarknessInit));
         try
         {
             OnDarknessInit?.Invoke(__instance);

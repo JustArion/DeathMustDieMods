@@ -21,14 +21,14 @@ using JetBrains.Annotations;
 public class AddHigherLevels_Patch
 {
     [UsedImplicitly]
-    private static bool Prefix(string code, ref int maxLevel, ref int pointsPerLevel, int winsToUnlock, string iconPath, List<ChallengeData.Effect> effects)
+    private static void Prefix(string code, ref int maxLevel, ref int pointsPerLevel, int winsToUnlock, string iconPath, List<ChallengeData.Effect> effects)
     {
         try
         {
             // Logger.LogDebug($"{nameof(AddHigherLevels_Patch)}: Code: {code}, MaxLevel: {maxLevel}, PointsPerLevel: {pointsPerLevel}, WinsToUnlock: {winsToUnlock}, IconPath: {iconPath}, Effects: {effects.Count}");
 
             if (!StarCruxVerifier.IsExpectedStarCruxChallenge(code, maxLevel, pointsPerLevel))
-                return true;
+                return;
 
             StarCruxModifier.ModifyChallengeData(code, ref maxLevel, ref pointsPerLevel);
         }
@@ -36,7 +36,5 @@ public class AddHigherLevels_Patch
         {
             ModLogger.LogError(e);
         }
-        
-        return true;
     }
 }

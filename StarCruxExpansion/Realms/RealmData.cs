@@ -10,7 +10,7 @@ using Helpers;
 [SuppressMessage("ReSharper", "ReturnTypeCanBeEnumerable.Global")]
 public class RealmData(string realmName, ChallengeDataInformation[] challenges) : IReadOnlyCollection<ChallengeData>
 {
-    internal readonly DarknessOptions options = challenges.Select(x => x.ChallengeData).ToDarknessOptions();
+    public readonly DarknessOptions options = challenges.Select(x => x.ChallengeData).ToDarknessOptions();
     public string RealmName { get; } = realmName;
 
     public ChallengeDataInformation[] ChallengesInformation => challenges;

@@ -8,6 +8,7 @@ using Harmony;
 using Helpers;
 using JetBrains.Annotations;
 using Realms.StarCruxExpansion;
+using Realms.StarCruxExtras;
 using Realms.UI;
 
 [BepInPlugin("dawn.dmd.starcruxexpansion", "StarCruxExpansion", "1.0.0")]
@@ -25,7 +26,8 @@ public class Plugin : BaseUnityPlugin
 
         InterceptStarCruxUI_Patch.OnDarknessInit += darkness => darkness.AddComponent<ModdedRealmManager>();
 
-        ModdedRealmManager.AddModdedRealm(Realm.BuildRealm());
+        ModdedRealmManager.AddModdedRealm(StarCruxExpansionRealm.BuildRealm());
+        ModdedRealmManager.AddModdedRealm(StarCruxExtras.BuildRealm());
     }
     
 }

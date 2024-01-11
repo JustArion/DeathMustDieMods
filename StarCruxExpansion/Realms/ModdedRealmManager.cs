@@ -13,6 +13,7 @@ using UnityEngine;
 [DisallowMultipleComponent]
 public class ModdedRealmManager : MonoBehaviour
 {
+    public static IReadOnlyList<RealmData> moddedRealms => _moddedRealms;
     internal static readonly List<RealmData> _moddedRealms = [];
 
     internal static readonly HashSet<ChallengeDataInformation> _allModdedChallenges = [];    
@@ -41,7 +42,7 @@ public class ModdedRealmManager : MonoBehaviour
         _affordanceHandler = _realmNameCarousel.NextRealmButton.AddComponent<AffordanceHandler>();
         _affordanceHandler.SetData("ModdedRealm_Affordance");
         _realmNameCarousel.NextRealmButton.onClick.AddListener(_affordanceHandler.DismissAffordance);
-        
+
         foreach (var realm in _moddedRealms) 
             _realmNameCarousel.AddRealmName(realm.RealmName, OnRealmNavigate);
     }

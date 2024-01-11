@@ -26,6 +26,7 @@ public class ModdedUILocalization_Patch
             return true; // Have it localize vanilla challenges
 
         var moddedChallengeData = moddedChallenges.First(x => x.ChallengeData.Code == challenge.Code);
+        
         __instance.TitleText().text = moddedChallengeData.TextInformation.Title;
                 
         return false;
@@ -45,8 +46,7 @@ public class ModdedUILocalization_Patch
         if (moddedChallenges.All(x => x.ChallengeData != challenge))
             return true; // Have it localize vanilla challenges
 
-        var stats = challenge.GenerateStatsForLevel(__instance.Level() + 3).ToArray();
-        
+        var stats = challenge.GenerateStatsForLevel(__instance.Level()).ToArray();
         
         
         var moddedChallengeData = moddedChallenges.First(x => x.ChallengeData.Code == challenge.Code);
