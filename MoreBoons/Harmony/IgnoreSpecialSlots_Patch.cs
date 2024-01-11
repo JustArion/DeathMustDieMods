@@ -40,13 +40,12 @@ public class IgnoreSpecialSlots_Patch2
     private const int OFFER_PROBABILITY_REDUCTION_PERCENT = 60;
 
     [UsedImplicitly]
-    private static bool Prefix(ref float __1)
+    private static void Prefix(ref float __1)
     {
         var originalProbability = __1;
         __1 *= 1 - OFFER_PROBABILITY_REDUCTION_PERCENT  / 100f;
         
         // Logger.LogDebug($"Reduced Special Slot Offer Probability from {originalProbability * 100}% to {__1 * 100}%");
-        return true;
     }
     
     [UsedImplicitly]

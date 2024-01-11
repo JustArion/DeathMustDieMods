@@ -14,15 +14,15 @@ public class AddMoreStashTabs_Patch
         typeof(int)
     ])]
     [UsedImplicitly]
-    private static bool Prefix(StashData __instance, ref int defaultPageCount)
+    private static void Prefix(StashData __instance, ref int defaultPageCount)
     {
+        var origCount = defaultPageCount;
         // We do an if check here in-case the dev changes the default page value to 5 or higher then we want this mod to stop doing what its doing
         if (defaultPageCount > 5) 
-            return true;
+            return;
         
         defaultPageCount = 5;
-        ModLogger.LogDebug("Your Stash tabs are now 5 from 3");
-        return true;
+        ModLogger.LogDebug($"Your Stash tabs are now {defaultPageCount} from {origCount}");
     }
 
     [HarmonyPatch(typeof(StashData), "TryParseSaveJson")]
