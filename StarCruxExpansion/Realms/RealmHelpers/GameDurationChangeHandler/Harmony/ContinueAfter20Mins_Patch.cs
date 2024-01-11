@@ -26,7 +26,7 @@ public class ContinueAfter20Mins_Patch
             Instances.Add(new(rules));
 
             var defaultRunDurationInMinutes = rules.RunDurationSeconds / 60;
-            rules.SetRunDurationInMinutes(GameDurationHandler.GetGameDuration());
+            rules.SetRunDurationInMinutes(GameDurationHandler.GetGameDurationInMinutes());
             if (Math.Abs(defaultRunDurationInMinutes - rules.GetRunDurationInMinutes()) > EPSILON )
                 ModLogger.LogDebug($"Run duration changed from '{Math.Round(defaultRunDurationInMinutes, 2)}' minutes to '{Math.Round(rules.GetRunDurationInMinutes(), 2)}' minutes");
         }
@@ -45,7 +45,7 @@ public class ContinueAfter20Mins_Patch
         {
             if (weakGameRules.TryGetTarget(out var gameRules))
             {
-                gameRules.SetRunDurationInMinutes(GameDurationHandler.GetGameDuration());
+                gameRules.SetRunDurationInMinutes(GameDurationHandler.GetGameDurationInMinutes());
                 updatedInstancesAmount++;
             }
             else

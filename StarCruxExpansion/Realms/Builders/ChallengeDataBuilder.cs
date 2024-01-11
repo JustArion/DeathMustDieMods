@@ -7,7 +7,7 @@ using Helpers;
 public class ChallengeDataBuilder
 {
     private string _title = string.Empty;
-    private string _description = string.Empty;
+    private ChallengeDescriptionBuilder _description;
     private string _code = string.Empty;
     private uint _maxLevel = 1;
     private uint _pointsPerLevel = 1;
@@ -21,7 +21,7 @@ public class ChallengeDataBuilder
         return this;
     }
 
-    public ChallengeDataBuilder WithDescription(string descriptionFormat)
+    public ChallengeDataBuilder WithDescriptionBuilder(ChallengeDescriptionBuilder descriptionFormat)
     {
         _description = descriptionFormat;
         return this;

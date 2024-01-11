@@ -2,7 +2,8 @@
 
 using Death.Darkness;
 
-public readonly struct ChallengeDataInformation((string Title, string DescriptionFormat) textInformation, ChallengeData challengeData)
+public delegate string ChallengeDescriptionBuilder(int challengeLevel);
+public readonly struct ChallengeDataInformation((string Title, ChallengeDescriptionBuilder DescriptionFormatBuilder) textInformation, ChallengeData challengeData)
 {
     public ChallengeData ChallengeData { get; } = challengeData;
     
@@ -12,5 +13,5 @@ public readonly struct ChallengeDataInformation((string Title, string Descriptio
     /// Flat - "Elite enemies have {0:stat(val|0.#|s|u|*100)} movement."
     /// eg. "Elite enemies have +60 movement."
     /// See Documentation/Deep-Dives/ChallengeDataSmartFormatter.md for more information
-    public (string Title, string DescriptionFormat) TextInformation { get; } = textInformation;
+    public (string Title, ChallengeDescriptionBuilder DescriptionFormatBuilder) TextInformation { get; } = textInformation;
 }

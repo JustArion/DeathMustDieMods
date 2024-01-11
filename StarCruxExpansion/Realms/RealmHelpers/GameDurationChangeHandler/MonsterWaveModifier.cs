@@ -7,12 +7,12 @@ public static class MonsterWaveModifier
 {
     public static void OnRunStart(Facade_Run run)
     {
-        var gameLength = GameDurationHandler.GetGameDuration();
-        var defaultGameLength = run.Options.WaveData.Last().BeginTimeSec / 60;
+        var gameLength = GameDurationHandler.GetGameDurationInMinutes();
+        var defaultGameLengthInMinutes = run.Options.WaveData.Last().BeginTimeSec / 60;
         
-        var gameLengthMultiplier = (float)gameLength / defaultGameLength;
+        var gameLengthMultiplier = (float)gameLength / defaultGameLengthInMinutes;
         
-        ModLogger.LogDebug($"New run started! The game length multiplier is '{Math.Round(gameLengthMultiplier, 2)}'");
+        ModLogger.LogDebug($"New run started! The game length multiplier is '{Math.Round(gameLengthMultiplier, 2)}'. The game should take approx {gameLength} minutes.");
 
         for (var index = 0; index < run.Options.WaveData.Count; index++)
         {

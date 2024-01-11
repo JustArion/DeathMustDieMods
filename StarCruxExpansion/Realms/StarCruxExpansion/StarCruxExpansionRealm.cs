@@ -13,7 +13,7 @@ public static class StarCruxExpansionRealm
 
         // Description outputs like: 
         //                                  Bosses have {0:stat(mvm|0.#|%|s|u)} movement.
-        builder.WithChallenge("The Spood", $"Bosses have {builder.FormatStat(StatId.MovementSpeed, StatChangeType.Bonus)} movement.")
+        builder.WithChallenge("The Spood", _ => $"Bosses have {builder.FormatStat(StatId.MovementSpeed, StatChangeType.Bonus)} movement.")
             .WithCode("boss_spood")
             .WithMaxLevel(5)
             .WithPointsPerLevel(2)

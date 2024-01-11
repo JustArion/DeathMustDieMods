@@ -46,12 +46,14 @@ public class ModdedUILocalization_Patch
         if (moddedChallenges.All(x => x.ChallengeData != challenge))
             return true; // Have it localize vanilla challenges
 
-        var stats = challenge.GenerateStatsForLevel(__instance.Level()).ToArray();
+        var level = __instance.Level();
+
+        var stats = challenge.GenerateStatsForLevel(level).ToArray();
         
         
         var moddedChallengeData = moddedChallenges.First(x => x.ChallengeData.Code == challenge.Code);
 
-        var descriptionFormat = moddedChallengeData.TextInformation.DescriptionFormat;
+        var descriptionFormat = ExceptionWrappers.Wrap(()=> moddedChallengeData.TextInformation.DescriptionFormatBuilder(level), string.Empty, ModLogger.LogErrorMessage);
         var challengeDescription = ExceptionWrappers.Wrap(() => 
                 LocalizationSettings.StringDatabase.SmartFormatter.Format(descriptionFormat, stats),
             descriptionFormat, ModLogger.LogErrorMessage);

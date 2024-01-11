@@ -13,13 +13,13 @@ public static class GameDurationHandler
         get => _gameDurationDeltaInMinutes;
         set
         {
-            ModLogger.LogDebug($"Game Duration Changed from {DEFAULT_GAME_DURATION_MINS - _gameDurationDeltaInMinutes} to {DEFAULT_GAME_DURATION_MINS - value} minutes");
+            ModLogger.LogDebug($"Game Duration Changed from {DEFAULT_GAME_DURATION_MINS + _gameDurationDeltaInMinutes} to {DEFAULT_GAME_DURATION_MINS + value} minutes");
             _gameDurationDeltaInMinutes = value;           
         }
     }
     
     
     // Minimum game duration is now 5min
-    public static int GetGameDuration() => 
+    public static int GetGameDurationInMinutes() => 
         Mathf.Clamp(DEFAULT_GAME_DURATION_MINS + GameDurationDeltaInMinutes, 5, int.MaxValue);
 }

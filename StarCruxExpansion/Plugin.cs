@@ -7,6 +7,8 @@ using BepInEx.Logging;
 using Harmony;
 using Helpers;
 using JetBrains.Annotations;
+using Realms.RealmHelpers.GameDurationChangeHandler;
+using Realms.RealmHelpers.GameDurationChangeHandler.Harmony;
 using Realms.StarCruxExpansion;
 using Realms.StarCruxExtras;
 using Realms.UI;
@@ -28,6 +30,8 @@ public class Plugin : BaseUnityPlugin
 
         ModdedRealmManager.AddModdedRealm(StarCruxExpansionRealm.BuildRealm());
         ModdedRealmManager.AddModdedRealm(StarCruxExtras.BuildRealm());
+        
+        OnRunStart_Patch.OnRunStart += MonsterWaveModifier.OnRunStart;
     }
     
 }

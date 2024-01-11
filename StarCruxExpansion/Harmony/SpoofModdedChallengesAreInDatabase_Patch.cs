@@ -13,6 +13,8 @@ public class SpoofModdedChallengesAreInDatabase_Patch
     {
         if (!ModdedRealmHelper.TryGetModdedChallenge(__0, out __1)) 
             return true;
+
+        ModLogger.LogDebug($"bool {nameof(DarknessTable)}::{nameof(DarknessTable.TryGet)}({__0}, {__1}) returned true. (Patch: {nameof(SpoofModdedChallengesAreInDatabase_Patch)})");
                 
         __result = true;
         return false;

@@ -4,6 +4,12 @@ using System.Collections.Generic;
 using Death.Run.Core;
 using Reflection;
 
+/// <summary>
+/// Reminder: Challenge titles should follow the game's original theme of "Capital On Each Letter".
+/// Challenge descriptions should follow similarly like: "Capital on start and fullstop at the end."
+/// Realm names should follow the challenge title theme.
+/// </summary>
+/// <param name="realmName"></param>
 public class RealmDataBuilder(string realmName)
 {
     public string FormatStat(StatId id, StatChangeType type)
@@ -33,11 +39,11 @@ public class RealmDataBuilder(string realmName)
 
     private readonly List<ChallengeDataBuilder> _challengeBuilders = [];
 
-    public ChallengeDataBuilder WithChallenge(string challengeTitle, string formattedDescription)
+    public ChallengeDataBuilder WithChallenge(string challengeTitle, ChallengeDescriptionBuilder formattedDescription)
     {
         var challengeBuilder = new ChallengeDataBuilder()
             .WithTitle(challengeTitle)
-            .WithDescription(formattedDescription);
+            .WithDescriptionBuilder(formattedDescription);
 
         _challengeBuilders.Add(challengeBuilder);
 

@@ -4,17 +4,19 @@ Adds more difficulty levels to the **Star Crux**.
 Done:
 - Added several more difficulty levels to most if not all `The Outer Circle` **Star Crux** challenges.
 - Increased Item Rarity progress bar includes modded difficulty levels.
-
-To Do:
-- Add custom modded challenges
-  - Sync modded points pages with vanilla points
-  - Save modded realms' points on page navigate
-  - Implement an affordance to notify the user that there are modded realms
-- ~~Add own page in the Star Crux for modded challenges~~
+- Merged the [Longer Games](../LongerGames) mod into `Star Crux Expansion` under the `Star Crux Extras` realm.
+- Sync modded points pages with vanilla points
+- Implement an affordance to notify the user that there are modded realms
+- Add own page in the Star Crux for modded challenges
+  - Add custom modded challenges
 - Have the challenges appear properly in-game
 
+To Do:
+- Save modded realms' points on page navigate
+- Further refactorings for code quality and expandability in the future. (Mostly done in the form of builders)
 
-Alterations:
+
+### Alterations:
 
 | Code            |       Name       | Description                                    | # Increase Per Point | Max Level | Points Per Level |
 |:----------------|:----------------:|:-----------------------------------------------|:--------------------:|:---------:|:----------------:|
@@ -27,3 +29,22 @@ Alterations:
 | PlayerNoHeal    | Blackened Skies  | Elites and bosses have +# extra projectiles.   |          2           |  1 -> 4   |        4         |
 | BossesMoreLife  |  Borrowed Time   | Bosses have +#% more life per rank.            |          35          |  3 -> 6   |      2 -> 4      |
 
+### Modded Realms:
+
+`Realm Expansion #1`:
+
+| Code            |   Name    | Description               | # Increase Per Point | Max Level | Points Per Level |
+|:----------------|:---------:|:--------------------------|:--------------------:|:---------:|:----------------:|
+| boss_spood      | The Spood | Bosses have +#% movement. |          35          |     5     |        2         |
+
+`Star Crux Extras`:
+
+| Code         |     Name     | Description                  | # Increase Per Point | Max Level | Points Per Level |
+|:-------------|:------------:|:-----------------------------|:--------------------:|:---------:|:----------------:|
+| longer_runs  | Longer Runs  | Your runs are # min longer.  |          5           |    10     |        0         |
+| shorter_runs | Shorter Runs | Your runs are # min shorter. |          5           |     3     |        1         |
+
+The shortest run is currently limited to 5min by the mod, though unlikely for the user to finish the run in 5min.
+
+[!NOTE]
+Suggestions are welcome by opening an issue on the repo page.

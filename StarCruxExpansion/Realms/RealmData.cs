@@ -16,7 +16,7 @@ public class RealmData(string realmName, ChallengeDataInformation[] challenges) 
     public ChallengeDataInformation[] ChallengesInformation => challenges;
     public IEnumerable<ChallengeData> Challenges { get; } = challenges.Select(x => x.ChallengeData);
 
-    public IEnumerable<(string Title, string DescriptionFormat)> ChallengeDataInformation { get; } = challenges.Select(x => x.TextInformation);
+    public IEnumerable<(string Title, ChallengeDescriptionBuilder DescriptionFormat)> ChallengeDataInformation { get; } = challenges.Select(x => x.TextInformation);
     
     public IEnumerator<ChallengeData> GetEnumerator() => Challenges.GetEnumerator();
 
