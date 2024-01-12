@@ -10,11 +10,14 @@ Done:
 - Add own page in the Star Crux for modded challenges
   - Add custom modded challenges
 - Have the challenges appear properly in-game
+- Save modded realms' points on page navigate
 
 To Do:
-- Save modded realms' points on page navigate
 - Further refactorings for code quality and expandability in the future. (Mostly done in the form of builders)
+- More challenges for Realm Expansion #1
 
+[!NOTE]
+Save data is stored at `...\Death Must Die\BepInEx\config\dawn.dmd.starcruxexpansion.cfg` 
 
 ### Alterations:
 
@@ -33,9 +36,12 @@ To Do:
 
 `Realm Expansion #1`:
 
-| Code            |   Name    | Description               | # Increase Per Point | Max Level | Points Per Level |
-|:----------------|:---------:|:--------------------------|:--------------------:|:---------:|:----------------:|
-| boss_spood      | The Spood | Bosses have +#% movement. |          35          |     5     |        2         |
+| Code        |    Name    | Description                | # Increase Per Point | Max Level | Points Per Level |
+|:------------|:----------:|:---------------------------|:--------------------:|:---------:|:----------------:|
+| boss_spood  | The Spood  | Bosses have +#% movement.  |          35          |     5     |        2         |
+| trash_spood | The Homies | Minions have +# movement.  |          10          |     5     |        3         |
+| fun_kb      | Surf's Up  | Enemies have +# knockback. |          50          |    10     |        1         |
+
 
 `Star Crux Extras`:
 
