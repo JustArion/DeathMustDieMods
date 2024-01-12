@@ -31,8 +31,6 @@ public class ModdedUILocalization_Patch
                 
         return false;
     }
-    
-    /* TODO: Fix Description Stat Display Errors */
 
     [HarmonyPatch("UpdateDescriptionAsync")]
     [HarmonyPrefix]
@@ -42,9 +40,9 @@ public class ModdedUILocalization_Patch
         var moddedChallenges = AllModdedChallenges;
         
         var challenge = __instance.Challenge();
-
-        if (moddedChallenges.All(x => x.ChallengeData != challenge))
-            return true; // Have it localize vanilla challenges
+        
+        if (!ModdedRealmHelper.TryGetModdedChallenge(challenge.Code, out _))
+            return true;
 
         var level = __instance.Level();
 
@@ -57,6 +55,8 @@ public class ModdedUILocalization_Patch
         var challengeDescription = ExceptionWrappers.Wrap(() => 
                 LocalizationSettings.StringDatabase.SmartFormatter.Format(descriptionFormat, stats),
             descriptionFormat, ModLogger.LogErrorMessage);
+        
+        // ModLogger.LogDebug($"Setting description text to '{challengeDescription}' with format '{descriptionFormat}' to {challenge.Code}");
 
         __instance.DescriptionText().text = challengeDescription;
         return false;
