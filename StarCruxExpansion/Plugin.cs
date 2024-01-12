@@ -7,11 +7,14 @@ using BepInEx.Logging;
 using Harmony;
 using Helpers;
 using JetBrains.Annotations;
+using Realms;
+using Realms.Persistence;
 using Realms.RealmHelpers.GameDurationChangeHandler;
 using Realms.RealmHelpers.GameDurationChangeHandler.Harmony;
 using Realms.StarCruxExpansion;
 using Realms.StarCruxExtras;
 using Realms.UI;
+using UI;
 
 [BepInPlugin("dawn.dmd.starcruxexpansion", "StarCruxExpansion", "1.0.0")]
 public class Plugin : BaseUnityPlugin
@@ -27,6 +30,7 @@ public class Plugin : BaseUnityPlugin
         HarmonyLib.Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly());
 
         InterceptStarCruxUI_Patch.OnDarknessInit += darkness => darkness.AddComponent<ModdedRealmManager>();
+        InterceptStarCruxUI_Patch.OnDarknessInit += darkness => darkness.AddComponent<StateMonitor>().Disable += RealmStateManager.SaveAll;
 
         ModdedRealmManager.AddModdedRealm(StarCruxExpansionRealm.BuildRealm());
         ModdedRealmManager.AddModdedRealm(StarCruxExtras.BuildRealm());

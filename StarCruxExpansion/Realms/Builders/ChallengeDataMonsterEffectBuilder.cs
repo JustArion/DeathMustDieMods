@@ -52,23 +52,40 @@ public class ChallengeDataMonsterEffectBuilder
     
     internal ChallengeData.Effect Build()
     {
-        var statArray = _statArray.Select(x => (x.Key, x.Value)).ToArray();
+        try
+        {
+            var statArray = _statArray.Select(x => (x.Key, x.Value)).ToArray();
 
-        var requiredStat = _statChangeType is StatChangeType.Flat or StatChangeType.Bonus 
-            ? StatId.EffectValue 
-            : StatId.EffectPercent;
-        var primaryStat = _primaryStat ?? statArray.First().Key;
+            var requiredStat = _statChangeType is StatChangeType.Flat or StatChangeType.Bonus 
+                ? StatId.EffectValue 
+                : StatId.EffectPercent;
+            var primaryStat = _primaryStat ?? statArray.First().Key;
         
-        var statsPerLevel = new ModdedStatArray<float>(statArray);
-        var creator = new GlobalEffectCreator(requiredStats: [requiredStat],
-            stats =>
-            {
-                var value = stats.Get(primaryStat);
-                
-                return new GlobalEffect_MonsterStatChange(new(), primaryStat, value,
-                    _statChangeType, _monsterMask);
-            });
+            var statsPerLevel = new ModdedStatArray<float>(statArray);
+            var creator = new GlobalEffectCreator(requiredStats: [requiredStat],
+                stats =>
+                {
+                    try
+                    {
+                        var value = stats.Get(primaryStat);
 
-        return new ChallengeData.Effect(statsPerLevel, creator);
+                        return new GlobalEffect_MonsterStatChange(new(), primaryStat, value,
+                            _statChangeType, _monsterMask);
+                    }
+                    catch (Exception e)
+                    {
+                        ModLogger.LogError(e);
+                        throw;
+                    }
+
+                });
+
+            return new ChallengeData.Effect(statsPerLevel, creator);
+        }
+        catch (Exception e)
+        {
+            ModLogger.LogError(e);
+            throw;
+        }
     }
 }

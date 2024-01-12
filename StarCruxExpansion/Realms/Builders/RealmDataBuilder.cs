@@ -49,6 +49,17 @@ public class RealmDataBuilder(string realmName)
 
         return challengeBuilder;
     }
+    
+    public ChallengeDataBuilder WithChallenge(string challengeTitle, string formattedDescription)
+    {
+        var challengeBuilder = new ChallengeDataBuilder()
+            .WithTitle(challengeTitle)
+            .WithDescriptionBuilder(_ => formattedDescription);
+
+        _challengeBuilders.Add(challengeBuilder);
+
+        return challengeBuilder;
+    }
 
     public RealmData Build()
     {
@@ -58,6 +69,13 @@ public class RealmDataBuilder(string realmName)
 
         if (challenges.Length == 0) 
             ModLogger.LogWarning($"Realm '{realmName}' was created with 0 challenges!");
+        
+        // Check if all challenges' codes are unique
+        var codes = challenges.Select(x => x.ChallengeData.Code).ToArray();
+        if (codes.Length != codes.Distinct().Count())
+            ModLogger.LogWarning(
+                $"Realm '{realmName}' has duplicate challenge codes. This may cause name and description issues.");
+        
         return new(realmName, challenges);
     }
 }
