@@ -4,7 +4,7 @@
     <TargetFramework>net48</TargetFramework>
     <AssemblyName>StarCruxExpansion</AssemblyName>
     <Description>Adds more difficulty options and levels into the Star Crux.</Description>
-    <Version>1.0.0</Version>
+    <Version>1.1.0</Version>
     <LangVersion>latest</LangVersion>
     <RootNamespace>Dawn.DMD.StarCruxExpansion</RootNamespace>
     <RestoreAdditionalProjectSources>
@@ -25,6 +25,7 @@
     <DebugType>embedded</DebugType>
     <OutputPath>D:\Games\Death Must Die\BepInEx\plugins\</OutputPath>
     <NoWarn>1701;1702;CS0618</NoWarn>
+    <DebugSymbols>true</DebugSymbols>
 </PropertyGroup>
 
 <ItemGroup>

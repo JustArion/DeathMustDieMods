@@ -36,11 +36,12 @@ Save data is stored at `...\Death Must Die\BepInEx\config\dawn.dmd.starcruxexpan
 
 `Realm Expansion #1`:
 
-| Code        |    Name    | Description                | # Increase Per Point | Max Level | Points Per Level |
-|:------------|:----------:|:---------------------------|:--------------------:|:---------:|:----------------:|
-| boss_spood  | The Spood  | Bosses have +#% movement.  |          35          |     5     |        2         |
-| trash_spood | The Homies | Minions have +# movement.  |          10          |     5     |        3         |
-| fun_kb      | Surf's Up  | Enemies have +# knockback. |          50          |    10     |        1         |
+| Code                 |      Name       | Description                        | # Increase Per Point | Max Level | Points Per Level |
+|:---------------------|:---------------:|:-----------------------------------|:--------------------:|:---------:|:----------------:|
+| boss_spood           |    The Spood    | Bosses have +#% movement.          |          35          |     5     |        2         |
+| trash_spood          |   The Homies    | Minions have +# movement.          |          10          |     5     |        3         |
+| fun_kb               |    Surf's Up    | Enemies have +# knockback.         |          50          |    10     |        1         |
+| lose_boons_over_time | Devil's Bargain | +#% exp. Lose a boon every x mins. |         100          |     5     |        5         |
 
 
 `Star Crux Extras`:

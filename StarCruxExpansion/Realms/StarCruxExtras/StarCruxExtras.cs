@@ -25,11 +25,10 @@ public static class StarCruxExtras
             .WithIcon(ChallengeDataEx.ChallengeDataIcon.Angle)
             .WithMaxLevel(10)
             .WithPointsPerLevel(0)
-            .WithCustomEffect(new GlobalEffectCreator(Array.Empty<StatId>(), _ =>
+            .WithCustomEffect(new(Array.Empty<StatId>(), _ =>
             {
                 var currentLevel = Finder.GetRealmChallenge(REALM_NAME, LONGER_GAMES_CHALLENGE_CODE).Level;
 
-                ModLogger.LogDebug($"'{LONGER_GAMES_CHALLENGE_CODE}' -> Current Level is at {currentLevel}");
                 return new GlobalEffect_GameDurationChange(5 * currentLevel);
             }));
 
@@ -37,11 +36,10 @@ public static class StarCruxExtras
             .WithCode(SHORTER_GAMES_CHALLENGE_CODE)
             .WithIcon(ChallengeDataEx.ChallengeDataIcon.Boots)
             .WithMaxLevel(3)
-            .WithCustomEffect(new GlobalEffectCreator(Array.Empty<StatId>(), _ =>
+            .WithCustomEffect(new(Array.Empty<StatId>(), _ =>
             {
                 var currentLevel = Finder.GetRealmChallenge(REALM_NAME, SHORTER_GAMES_CHALLENGE_CODE).Level;
 
-                ModLogger.LogDebug($"'{SHORTER_GAMES_CHALLENGE_CODE}' -> Current Level is at {currentLevel}");
                 // Reduces the game duration by 5 mins x the challenge level
                 var gameDurationDelta = -(5 * currentLevel);
                 return new GlobalEffect_GameDurationChange(gameDurationDelta);

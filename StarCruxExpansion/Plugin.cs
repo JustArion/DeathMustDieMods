@@ -4,6 +4,9 @@ namespace Dawn.DMD.StarCruxExpansion;
 
 using System.Reflection;
 using BepInEx.Logging;
+using Death.Items;
+using Death.Run.Behaviours;
+using Death.Run.Systems;
 using Harmony;
 using Helpers;
 using JetBrains.Annotations;
