@@ -6,7 +6,7 @@ using System.Reflection;
 using BepInEx.Logging;
 using JetBrains.Annotations;
 
-[BepInPlugin("dawn.dmd.morestashtabs", "MoreStashTabs", "1.0.0")]
+[BepInPlugin("dawn.dmd.morestashtabs", "MoreStashTabs", "1.0.2")]
 public class Plugin : BaseUnityPlugin
 {
     internal static ManualLogSource ModLogger { get; private set; }

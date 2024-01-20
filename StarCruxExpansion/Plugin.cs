@@ -19,7 +19,7 @@ using Realms.StarCruxExtras;
 using Realms.UI;
 using UI;
 
-[BepInPlugin("dawn.dmd.starcruxexpansion", "StarCruxExpansion", "1.0.0")]
+[BepInPlugin("dawn.dmd.starcruxexpansion", "StarCruxExpansion", "1.1.1")]
 public class Plugin : BaseUnityPlugin
 {
     internal static ManualLogSource ModLogger { get; private set; }

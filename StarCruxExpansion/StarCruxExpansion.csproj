@@ -4,7 +4,6 @@
     <TargetFramework>net48</TargetFramework>
     <AssemblyName>StarCruxExpansion</AssemblyName>
     <Description>Adds more difficulty options and levels into the Star Crux.</Description>
-    <Version>1.1.0</Version>
     <LangVersion>latest</LangVersion>
     <RootNamespace>Dawn.DMD.StarCruxExpansion</RootNamespace>
     <RestoreAdditionalProjectSources>

@@ -1,4 +1,5 @@
-﻿namespace Dawn.DMD.StarCruxExpansion.Realms.RealmHelpers.GameDurationChangeHandler.Harmony;
+﻿#nullable enable
+namespace Dawn.DMD.StarCruxExpansion.Realms.RealmHelpers.GameDurationChangeHandler.Harmony;
 
 using Death.Run.Systems;
 using JetBrains.Annotations;

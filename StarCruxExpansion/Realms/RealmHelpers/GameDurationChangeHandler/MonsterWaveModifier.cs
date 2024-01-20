@@ -1,4 +1,5 @@
-﻿namespace Dawn.DMD.StarCruxExpansion.Realms.RealmHelpers.GameDurationChangeHandler;
+﻿#nullable enable
+namespace Dawn.DMD.StarCruxExpansion.Realms.RealmHelpers.GameDurationChangeHandler;
 
 using Death.Run.Systems;
 using Death.Run.Systems.Spawning;
