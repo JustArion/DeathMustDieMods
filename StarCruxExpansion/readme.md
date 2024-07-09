@@ -16,8 +16,8 @@ To Do:
 - Further refactorings for code quality and expandability in the future. (Mostly done in the form of builders)
 - More challenges for Realm Expansion #1
 
-[!NOTE]
-Save data is stored at `...\Death Must Die\BepInEx\config\dawn.dmd.starcruxexpansion.cfg` 
+> [!NOTE]
+> Save data is stored at `...\Death Must Die\BepInEx\config\dawn.dmd.starcruxexpansion.cfg` 
 
 ### Alterations:
 
