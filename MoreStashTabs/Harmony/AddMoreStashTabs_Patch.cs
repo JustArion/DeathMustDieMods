@@ -17,7 +17,7 @@ public class AddMoreStashTabs_Patch
     private static void Prefix(StashData __instance, ref int defaultPageCount)
     {
         var origCount = defaultPageCount;
-        // We do an if check here in-case the dev changes the default page value to 5 or higher then we want this mod to stop doing what its doing
+        // We do an if check here in-case the dev changes the default page value to 5 or higher than we want this mod to stop doing what its doing
         if (defaultPageCount > 5) 
             return;
         
