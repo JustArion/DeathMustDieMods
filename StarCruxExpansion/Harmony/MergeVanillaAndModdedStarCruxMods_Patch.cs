@@ -27,7 +27,7 @@ public class MergeVanillaAndModdedStarCruxMods_Patch
 
     private static RunOptions GenerateMergedRunOptions(Profile profile)
     {
-        var character = new CharacterSetup(profile.Progression.SelectedCharacterCode, profile.Progression.GetTraitFor(profile.Progression.SelectedCharacterCode));
+        var character = GetCharacterSetup(profile);
         var waveData = Database.WaveData;
         var targetDarkness = profile.Darkness.Clone();
 
@@ -38,5 +38,28 @@ public class MergeVanillaAndModdedStarCruxMods_Patch
         
         
         return new RunOptions(character, waveData, targetDarkness); 
+    }
+    
+    private static CharacterSetup GetCharacterSetup(Profile profile)
+    {
+        var code = GetProgressionCode(profile.Progression);
+        return new CharacterSetup(code, profile.Progression.GetTraitFor(code));
+    }
+
+    // Should we humor previous versions of the game?
+    // Might replace later with just `profile.Progression.SelectedCharacterId`
+    private static string GetProgressionCode(Progression progress)
+    {
+        // profile.Progression.SelectedCharacterCode
+        // Previous versions
+        if (typeof(Progression).GetField("SelectedCharacterCode", BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public) is { } selectedCharacterCodeField)
+            return (string)selectedCharacterCodeField.GetValue(progress);
+        
+        // profile.Progression.SelectedCharacterId
+        // Newer versions
+        if (typeof(Progression).GetField("SelectedCharacterId", BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public) is { } selectedCharacterIdField)
+            return (string)selectedCharacterIdField.GetValue(progress);
+        
+        throw new InvalidOperationException("Unable to retrieve character code from Progression. Version is incompatible or field names have changed.");
     }
 }
