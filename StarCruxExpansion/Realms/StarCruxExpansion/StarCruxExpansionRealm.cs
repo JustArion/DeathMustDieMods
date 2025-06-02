@@ -62,7 +62,7 @@ public static class StarCruxExpansionRealm
             .WithMaxLevel(5)
             .WithPointsPerLevel(5)
             .WithIcon(ChallengeDataEx.ChallengeDataIcon.Knife)
-            .WithCustomEffect(new(Array.Empty<StatId>(), _ =>
+            .WithCustomEffect(new([], _ =>
             {
                 var currentLevel = Finder.GetRealmChallenge(REALM_NAME, DEVILS_BARGAIN_CHALLENGE_CODE).Level;
                 var minsToLoseBoon = MinsToLoseBoon(currentLevel);
@@ -71,7 +71,7 @@ public static class StarCruxExpansionRealm
                 return new GlobalEffect_BoonLossOverTime(new GlobalEffect_BoonLossOverTime.BoonLossOptions(minsToLoseBoon, 
                     x => !x.IsTemporary && (int)x.Rarity < (int)Rarity.Master));
             }))
-            .WithCustomEffect(new(Array.Empty<StatId>(), _ =>
+            .WithCustomEffect(new([], _ =>
             {
                 var currentLevel = Finder.GetRealmChallenge(REALM_NAME, DEVILS_BARGAIN_CHALLENGE_CODE).Level;
 

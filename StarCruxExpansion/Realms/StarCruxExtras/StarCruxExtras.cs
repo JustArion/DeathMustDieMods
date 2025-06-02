@@ -25,7 +25,7 @@ public static class StarCruxExtras
             .WithIcon(ChallengeDataEx.ChallengeDataIcon.Angle)
             .WithMaxLevel(10)
             .WithPointsPerLevel(0)
-            .WithCustomEffect(new(Array.Empty<StatId>(), _ =>
+            .WithCustomEffect(new([], _ =>
             {
                 var currentLevel = Finder.GetRealmChallenge(REALM_NAME, LONGER_GAMES_CHALLENGE_CODE).Level;
 
@@ -36,7 +36,7 @@ public static class StarCruxExtras
             .WithCode(SHORTER_GAMES_CHALLENGE_CODE)
             .WithIcon(ChallengeDataEx.ChallengeDataIcon.Boots)
             .WithMaxLevel(3)
-            .WithCustomEffect(new(Array.Empty<StatId>(), _ =>
+            .WithCustomEffect(new([], _ =>
             {
                 var currentLevel = Finder.GetRealmChallenge(REALM_NAME, SHORTER_GAMES_CHALLENGE_CODE).Level;
 
