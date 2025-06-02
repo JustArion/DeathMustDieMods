@@ -4,9 +4,10 @@ A small collection of mods I've made for the game `Death Must Die` using the [Be
 
 - [Limitless Encounters](../LimitlessEncounters/readme.md)
 - [More Boons](../MoreBoons/readme.md)
-- [More Stash Tabs](../MoreStashTabs/readme.md)
+- ~~[More Stash Tabs](../MoreStashTabs/readme.md)~~ (Seems tabs are no longer a thing)
 - ~~[Longer Games](../LongerGames/readme.md)~~ (Introduced this mod's functionality in [Star Crux Expansion](../StarCruxExpansion/readme.md))
 - [Star Crux Expansion](../StarCruxExpansion/readme.md)
+- [No Unfocused Pauses](../NoUnfocusedPauses/readme.md)
 
 ### New to Mods Install Guide
 
