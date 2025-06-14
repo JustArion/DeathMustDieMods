@@ -1,3 +1,12 @@
+> [!NOTE]
+> ## Archive Notice
+> ---
+> The project has become more maintenence than it's worth. Some annoying issues with the mods are
+> - Death Must Die code changes drastically from version to version
+> - Game went from x86 to x64
+> - I don't actively play the game anymore
+> - I have little to no interest in playing the game anymore. 
+
 A small collection of mods I've made for the game `Death Must Die` using the [BepInEx](https://github.com/BepInEx/BepInEx) mod loader.
 
 ### Mod Catalog
