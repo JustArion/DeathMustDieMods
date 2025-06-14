@@ -1,4 +1,7 @@
-﻿namespace Dawn.DMD.StarCruxExpansion.Harmony;
+﻿using Death.TimesRealm;
+using Death.TimesRealm.UserInterface.Darkness;
+
+namespace Dawn.DMD.StarCruxExpansion.Harmony;
 
 using Death.Darkness;
 using JetBrains.Annotations;

@@ -22,10 +22,12 @@ public static class FormatHelper
         return changeType switch
         {
             StatChangeType.Flat => "{0:stat(STAT_TYPE_HOLDER|0.#|s|u|*100)}",
-            StatChangeType.LevelMod => throw new NotSupportedException(),
             StatChangeType.BoonMod => throw new NotSupportedException(),
             StatChangeType.ItemMod => throw new NotSupportedException(),
             StatChangeType.Bonus => "{0:stat(STAT_TYPE|0.#|%|s|u)}",
+            StatChangeType.TalentMod => throw new NotSupportedException(),
+            StatChangeType.AdditionalItemValue => throw new NotSupportedException(),
+            StatChangeType.Darkness => throw new NotSupportedException(),
             _ => throw new ArgumentOutOfRangeException(nameof(changeType), changeType, null)
         };
     }

@@ -1,4 +1,6 @@
-﻿namespace Dawn.DMD.StarCruxExpansion.Harmony;
+﻿using Death.TimesRealm;
+
+namespace Dawn.DMD.StarCruxExpansion.Harmony;
 
 using Death.Darkness;
 using Death.TimesRealm.UserInterface.Darkness;

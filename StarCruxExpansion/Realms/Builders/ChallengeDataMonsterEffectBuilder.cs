@@ -69,8 +69,7 @@ public class ChallengeDataMonsterEffectBuilder
                     {
                         var value = stats.Get(primaryStat);
 
-                        return new GlobalEffect_MonsterStatChange(new(), primaryStat, value,
-                            _statChangeType, _monsterMask);
+                        return new GlobalEffect_MonsterStatChange(new(), primaryStat, _statChangeType, value,_monsterMask);
                     }
                     catch (Exception e)
                     {

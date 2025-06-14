@@ -38,7 +38,8 @@ public class GlobalEffect_BoonLossOverTime(GlobalEffect_BoonLossOverTime.BoonLos
             // Only ticks when the game is unpaused.
             await UniTaskUtils.DelaySeconds((float)(options.XPLossAfterXMins * 60), cancellationToken: token);
 
-            var boons = playerManager.Boons.Where(x => options.BoonDiscriminator(x)).ToArray();
+            
+            var boons = playerManager.Player.Boons.Where(x => options.BoonDiscriminator(x)).ToArray();
             var len = boons.Length;
 
             // 1 - Dash
@@ -53,7 +54,7 @@ public class GlobalEffect_BoonLossOverTime(GlobalEffect_BoonLossOverTime.BoonLos
             var randomIndex = Random.Range(2, len);
 
             var boon = boons[randomIndex];
-            playerManager.RemoveBoon(boon);
+            playerManager.Player.Boons.Remove(boon);
 
             ModLogger.LogDebug($"Boon '{boon.Code}' has been lost after {options.XPLossAfterXMins} mins.");
         }

@@ -35,6 +35,7 @@ public class AddModdedChallengesTotalPoints_Patch
         
         try
         {
+            
             var vanillaOptions = InterceptStarCruxData_Patch.VanillaDarknessController?.Options ?? __instance;
             vanillaOptions.Challenges().ForEach(challenge =>
             {

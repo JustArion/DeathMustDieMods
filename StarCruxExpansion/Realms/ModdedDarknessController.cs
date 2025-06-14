@@ -1,4 +1,6 @@
-﻿namespace Dawn.DMD.StarCruxExpansion.Realms;
+﻿using Death.TimesRealm.UserInterface.Darkness;
+
+namespace Dawn.DMD.StarCruxExpansion.Realms;
 
 using System.Collections.Generic;
 using Death.Darkness;

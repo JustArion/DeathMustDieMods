@@ -11,13 +11,13 @@ public class GlobalEffect_XPMultiplierChange(int xpMultiplier) : ModdedGlobalEff
         var playerManager = RunSystems.Get<System_PlayerManager>();
 
         ModLogger.LogDebug($"XP Multiplier on Player is {xpMultiplier}x");
-        playerManager.Player.Unit.Entity.Stats.AddBonus(StatId.XpMultiplier, xpMultiplier);
+        playerManager.PlayerEntity.Stats.Modifier.AddFinalBonus(StatId.XpMultiplier, xpMultiplier);
     }
 
     protected override void OnBecomeInactive()
     {
         var playerManager = RunSystems.Get<System_PlayerManager>();
 
-        playerManager.Player.Unit.Entity.Stats.AddBonus(StatId.XpMultiplier, -xpMultiplier);
+        playerManager.PlayerEntity.Stats.Modifier.AddFinalBonus(StatId.XpMultiplier, -xpMultiplier);
     }
 }

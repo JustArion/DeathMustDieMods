@@ -1,4 +1,6 @@
-﻿namespace Dawn.DMD.MoreBoons.Harmony;
+﻿using Death.Run.Core.Abilities;
+
+namespace Dawn.DMD.MoreBoons.Harmony;
 
 using System.Collections.Generic;
 using Death.Run.Core.Boons;
@@ -10,21 +12,30 @@ using JetBrains.Annotations;
 [HarmonyPatch(typeof(BoonManager))]
 public class IgnoreSpecialSlots_Patch1
 {
-    [UsedImplicitly]
-    [HarmonyPostfix]
-    [HarmonyPatch(nameof(BoonManager.SlotHoldsDefault), typeof(BoonSlot))]
-    private static void SlotHoldsDefault(BoonManager __instance, BoonSlot slot, ref bool __result)
-    {
-        if (__result) return;
-        __result = true;
-    }
+    // [UsedImplicitly]
+    // [HarmonyPostfix]
+    // [HarmonyPatch(nameof(BoonManager.SlotHoldsDefault), typeof(BoonSlot))]
+    // private static void SlotHoldsDefault(BoonManager __instance, BoonSlot slot, ref bool __result)
+    // {
+    //     if (__result) return;
+    //     __result = true;
+    // }
+    //
+    // [UsedImplicitly]
+    // [HarmonyPostfix]
+    // [HarmonyPatch(nameof(BoonManager.SlotIsFree), typeof(BoonSlot))]
+    // private static void SlotIsFree(BoonManager __instance, BoonSlot slot, ref bool __result)
+    // {
+    //     if (__result) return;
+    //     __result = true;
+    // }
     
-    [UsedImplicitly]
     [HarmonyPostfix]
-    [HarmonyPatch(nameof(BoonManager.SlotIsFree), typeof(BoonSlot))]
-    private static void SlotIsFree(BoonManager __instance, BoonSlot slot, ref bool __result)
+    [HarmonyPatch(nameof(BoonManager.HasFreeSlot), typeof(SkillSlot))]
+    private static void HasFreeSlot(BoonManager __instance, SkillSlot slot, ref bool __result)
     {
-        if (__result) return;
+        if (__result)
+            return;
         __result = true;
     }
 }
@@ -48,8 +59,15 @@ public class IgnoreSpecialSlots_Patch2
         // Logger.LogDebug($"Reduced Special Slot Offer Probability from {originalProbability * 100}% to {__1 * 100}%");
     }
     
+    
+    // private bool CheckSpecialSlotOffer(
+        // SkillSlot slot,
+        // float probabilityNew,
+        // RewardGenerator.RewardGenContext context,
+        // out BoonData offer)
     [UsedImplicitly]
-    private static void Postfix(RewardGenerator __instance, ref bool __result, BoonSlot __0, ref Boon __3)
+    // private static void Postfix(RewardGenerator __instance, ref bool __result, BoonSlot __0, ref Boon __3)
+    private static void Postfix(RewardGenerator __instance, ref bool __result, SkillSlot __0, float __1, object __2, ref BoonData __3)
     {
         try
         {
